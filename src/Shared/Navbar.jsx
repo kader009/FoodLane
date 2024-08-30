@@ -52,7 +52,7 @@ const Navbar = () => {
                 <li>
                   <button
                     onClick={logOut}
-                    className="bg-blue-600 text-white flex justify-center items-center hover:bg-blue-900"
+                    className="bg-[#F44336] text-white flex justify-center items-center hover:bg-blue-900"
                   >
                     Logout
                   </button>
@@ -84,7 +84,7 @@ const Navbar = () => {
             {user ? (
               <>
                 <li>
-                  <button onClick={logOut} className="bg-blue-600 text-white">
+                  <button onClick={logOut} className="bg-[#F44336] text-white hover:bg-[#F44336]">
                     Logout
                   </button>
                 </li>
@@ -130,7 +130,7 @@ const Navbar = () => {
                 <li>
                   <button
                     onClick={logOut}
-                    className="bg-blue-600 text-white flex justify-center items-center hover:bg-blue-800"
+                    className="bg-[#F44336] text-white flex justify-center items-center hover:bg-blue-800"
                   >
                     Logout
                   </button>
