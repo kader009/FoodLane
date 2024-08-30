@@ -10,7 +10,7 @@ const Navbar = () => {
           to="/"
           className="normal-case text-xl font-semibold dark:text-white"
         >
-          TaskHub
+          FoodLane
         </Link>
       </div>
       <div className="flex-none gap-2">
