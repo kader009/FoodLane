@@ -3,31 +3,32 @@ const chefs = [
     name: 'John Doe',
     designation: 'Head Chef',
     image:
-      'https://st4.depositphotos.com/1017986/25404/i/450/depositphotos_254046202-stock-photo-happy-male-indian-chef-in.jpg',
+      'https://mir-s3-cdn-cf.behance.net/projects/404/94fafc78689473.Y3JvcCwxMzY2LDEwNjgsMCwyMzM.jpg',
   },
   {
     name: 'Jane Smith',
     designation: 'Sous Chef',
     image:
-      'https://www.shutterstock.com/image-photo/smiling-young-beautiful-asian-woman-600nw-2337955697.jpg',
+      'https://img.freepik.com/premium-photo/chef-woman-wearing-white-uniform-dark-background-generative-ai_58409-30398.jpg',
   },
   {
     name: 'Emily Johnson',
     designation: 'Pastry Chef',
     image:
-      'https://media.istockphoto.com/id/1165683221/photo/chef-presents-something-on-a-black-background.jpg?s=612x612&w=0&k=20&c=G3_9EIg-nt-ZKh48hlvRMYWhizVU3uQuUcoNuhOVLKM=',
+      'https://us.123rf.com/450wm/serezniy/serezniy1809/serezniy180939857/110126965-african-american-chef-in-uniform-on-dark-background.jpg?ver=6',
   },
 ];
 
 const OurChefs = () => {
   return (
-    <section className="py-12 bg-black">
+    <section className="py-12 bg-black px-12">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-8">Meet Our Chefs</h2>
+        <h2 className="text-4xl font-bold mb-2 text-[#F44336]">Meet Our Chefs</h2>
+        <p className="mb-6">Our chef at FoodLane expertly crafts each dish, ensuring every bite is a delight.</p>
         <div className="flex flex-wrap justify-center">
           {chefs.map((chef, index) => (
             <div key={index} className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
-              <div className="bg-[#09000d] rounded-lg shadow-lg p-6">
+              <div className="bg-[#0d0113] rounded-lg shadow-lg p-6">
                 <img
                   src={chef.image}
                   alt={chef.name}
