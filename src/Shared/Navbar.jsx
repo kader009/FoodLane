@@ -72,13 +72,19 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center gap-2">
           <ul className="menu menu-horizontal p-0 dark:text-white">
             <li>
-              <Link to="/">Home</Link>
+              <Link className="focus:text-white text-white" to="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/all-foods">All Foods</Link>
+              <Link className="focus:text-white text-white" to="/all-foods">
+                All Foods
+              </Link>
             </li>
             <li>
-              <Link to="/gallery">Gallery</Link>
+              <Link className="focus:text-white text-white" to="/gallery">
+                Gallery
+              </Link>
             </li>
 
             {user ? (
@@ -119,7 +125,7 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content  bg-gray-900 rounded-box w-52"
+                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content rounded-box w-52"
               >
                 <li>
                   <Link to="/my-food">My Food</Link>
