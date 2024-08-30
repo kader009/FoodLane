@@ -4,7 +4,7 @@ const ErrorPage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white text-center px-4 py-8">
       <div className="mb-8">
-        {/* Illustration */}
+        {/* Animated Illustration */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-48 h-48 mx-auto text-gray-500"
@@ -12,12 +12,14 @@ const ErrorPage = () => {
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M3 3h18v18H3V3zm3 3h12v12H6V6zm6 4h6m-6 4h6M6 12h6m6 4h-6m0-8h6m-6 4h6"
-          />
+          <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="2" className="text-[#F44336]">
+            <animate
+              attributeName="cy"
+              values="12;6;12"
+              dur="1.5s"
+              repeatCount="indefinite"
+            />
+          </circle>
         </svg>
       </div>
       <h1 className="text-6xl font-bold mb-4">404</h1>
