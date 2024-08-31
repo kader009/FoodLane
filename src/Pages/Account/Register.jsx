@@ -1,12 +1,19 @@
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
+import toast from 'react-hot-toast';
 
 const Register = () => {
   const { createUser, google, github } = useAuth();
 
   const handleGoogle = () => {
-    google();
+    google()
+      .then(() => {
+        toast.success('You successfully registered with Google!');
+      })
+      .catch((error) => {
+        toast.error(`Google login failed: ${error.message}`);
+      });
   };
 
   const handleGithub = () => {
