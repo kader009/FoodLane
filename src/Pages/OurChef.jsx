@@ -33,7 +33,7 @@ const OurChefs = () => {
         <div className="flex flex-wrap justify-center">
           {chefs.map((chef, index) => (
             <div key={index} className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
-              <div className="bg-[#0d0113] rounded-lg shadow-lg p-6">
+              <div className="bg-gray-950 rounded-lg shadow-lg p-6">
                 <img
                   src={chef.image}
                   alt={chef.name}
