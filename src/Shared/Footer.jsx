@@ -2,7 +2,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
+    <>
+    <hr />
     <footer className="footer bg-black text-gray-400 p-4">
+      
       <div className="container mx-auto flex flex-col md:flex-row justify-around items-center flex-wrap">
         <div className="flex items-center mb-4 md:mb-0">
           <span className="text-white text-2xl font-semibold">FoodLane</span>
@@ -69,6 +72,7 @@ const Footer = () => {
       </div>
 
     </footer>
+    </>
   );
 };
 
