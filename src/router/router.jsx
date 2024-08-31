@@ -6,6 +6,7 @@ import ErrorPage from '../Pages/ErrorPage';
 import Login from '../Pages/Account/Login';
 import Register from '../Pages/Account/Register';
 import AllFood from '../Pages/AllFood';
+import Gallery from '../Pages/Gallery';
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: '/all-foods',
         element: <AllFood />,
+      },
+      {
+        path: '/gallery',
+        element: <Gallery />,
       },
       {
         path: 'login',

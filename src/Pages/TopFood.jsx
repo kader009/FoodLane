@@ -20,6 +20,7 @@ const TopFood = () => {
               className="w-full h-48 object-cover"
               src={food.foodImage}
               alt={food.foodName}
+              loading='lazy'
             />
             <div className="px-4 py-6">
               <div className="font-bold text-xl mb-2">{food.foodName}</div>
