@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Register = () => {
-  const { createUser,google, github } = useAuth();
+  const { createUser, google, github } = useAuth();
 
-  const handleGoogle = () =>{
-    google()
-  }
+  const handleGoogle = () => {
+    google();
+  };
 
-  const handleGithub = () =>{
-    github()
-  }
+  const handleGithub = () => {
+    github();
+  };
 
   const {
     register,
@@ -91,7 +91,7 @@ const Register = () => {
 
         <div className="flex justify-between space-x-4">
           <button
-          onClick={() => handleGithub()}
+            onClick={() => handleGithub()}
             type="button"
             className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg shadow-md flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200"
           >
@@ -108,7 +108,7 @@ const Register = () => {
           </button>
 
           <button
-          onClick={() => handleGoogle()}
+            onClick={() => handleGoogle()}
             type="button"
             className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg shadow-md flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200"
           >

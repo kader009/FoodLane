@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 
 const Navbar = () => {
-  const { user } = useAuth();
-  const logOut = {};
+  const { user,  logOut} = useAuth();
+
   return (
     <div className="navbar bg-[rgba(8,8,8,7)] sticky top-0 z-10">
       <div className="flex-1">
@@ -92,7 +92,7 @@ const Navbar = () => {
               <>
                 <li>
                   <button
-                    onClick={logOut}
+                    onClick={() =>logOut()}
                     className="bg-[#F44336] text-white hover:bg-[#F44336] focus:bg-[#F44336] focus:text-white"
                   >
                     Logout
@@ -102,7 +102,7 @@ const Navbar = () => {
             ) : (
               <>
                 <li>
-                  <Link to="/login">Login</Link>
+                  <Link className="focus:text-white text-white" to="/login">Login</Link>
                 </li>
               </>
             )}

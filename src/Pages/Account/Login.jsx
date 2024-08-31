@@ -1,9 +1,27 @@
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
+import { useEffect } from 'react';
 
 const Login = () => {
-  const { signIn } = useAuth();
+  const { signIn, google, github, user } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location?.state?.from?.pathname || '/';
+
+  const handleGoogle = () => {
+    google();
+  };
+
+  const handleGithub = () => {
+    github();
+  };
+
+  useEffect(() => {
+    if (user) {
+      navigate(from);
+    }
+  }, [user, from, navigate]);
 
   const {
     register,
@@ -70,6 +88,7 @@ const Login = () => {
 
         <div className="flex justify-between space-x-4">
           <button
+            onClick={() => handleGithub()}
             type="button"
             className="bg-gray-900 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg shadow-md flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200"
           >
@@ -86,6 +105,7 @@ const Login = () => {
           </button>
 
           <button
+            onClick={() => handleGoogle()}
             type="button"
             className="bg-gray-900 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg shadow-md flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200"
           >
