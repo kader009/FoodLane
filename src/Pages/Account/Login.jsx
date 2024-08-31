@@ -1,7 +1,10 @@
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 
 const Login = () => {
+  const { logIn } = useAuth();
+
   const {
     register,
     handleSubmit,
@@ -9,9 +12,10 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    const { email, password } = data;
+    logIn(email, password);
   };
-  
+
   return (
     <div className="flex justify-center items-center min-h-screen bg-black">
       <form
@@ -57,7 +61,7 @@ const Login = () => {
 
         <div className="text-center text-white mt-6">
           <p>
-            New To Here 
+            New To Here
             <Link to={'/register'} className="text-blue-800 ms-2">
               Register
             </Link>
