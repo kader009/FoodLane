@@ -5,6 +5,7 @@ import Home from '../Pages/Home/Home';
 import ErrorPage from '../Pages/ErrorPage';
 import Login from '../Pages/Account/Login';
 import Register from '../Pages/Account/Register';
+import AllFood from '../Pages/AllFood';
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
       {
         path: 'about',
         element: <About />,
+      },
+      {
+        path: '/all-foods',
+        element: <AllFood />,
       },
       {
         path: 'login',

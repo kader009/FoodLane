@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const TopFood = () => {
   const [foods, SetFoods] = useState([]);
@@ -8,7 +9,8 @@ const TopFood = () => {
     <div className="bg-black text-center">
       <h1 className="text-4xl font-bold text-[#F44336] mb-3">Top Food</h1>
       <p className="text-lg mb-7 text-center truncate">
-      Explore our top-rated dishes, crafted with care and bursting with flavor. Savor <br /> a culinary journey that delights every bite.
+        Explore our top-rated dishes, crafted with care and bursting with
+        flavor. Savor <br /> a culinary journey that delights every bite.
       </p>
 
       <div className=" flex items-center justify-center flex-wrap ">
@@ -32,8 +34,10 @@ const TopFood = () => {
           </div>
         ))}
       </div>
-      <div className='text-center mt-3'>
-        <button className='bg-[#F44336] px-6 py-2 rounded'>See All</button>
+      <div className="text-center mt-3">
+        <Link to={'/all-foods'}>
+          <button className="bg-[#F44336] px-6 py-2 rounded">See All</button>
+        </Link>
       </div>
     </div>
   );
