@@ -23,8 +23,13 @@ const OurChefs = () => {
   return (
     <section className="py-12 bg-black px-12">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-2 text-[#F44336]">Meet Our Chefs</h2>
-        <p className="mb-6">Our chef at FoodLane expertly crafts each dish, ensuring every bite is a delight.</p>
+        <h2 className="text-4xl font-bold mb-2 text-[#F44336]">
+          Meet Our Chefs
+        </h2>
+        <p className="mb-6">
+          Our chef at FoodLane expertly crafts each dish, ensuring every bite is
+          a delight.
+        </p>
         <div className="flex flex-wrap justify-center">
           {chefs.map((chef, index) => (
             <div key={index} className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">

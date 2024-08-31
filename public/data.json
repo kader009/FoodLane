@@ -1,0 +1,340 @@
+[
+  {
+    "foodName": "Sushi",
+    "foodImage": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Japanese",
+    "quantity": 10,
+    "price": 15.99,
+    "addBy": {
+      "name": "John Doe",
+      "email": "johndoe@example.com"
+    },
+    "foodOrigin": "Japan",
+    "description": "Traditional Japanese dish of vinegared rice, raw fish, and vegetables."
+  },
+  {
+    "foodName": "Pizza Margherita",
+    "foodImage": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Italian",
+    "quantity": 20,
+    "price": 12.99,
+    "addBy": {
+      "name": "Jane Smith",
+      "email": "janesmith@example.com"
+    },
+    "foodOrigin": "Italy",
+    "description": "Classic Italian pizza topped with tomatoes, mozzarella, and basil."
+  },
+  {
+    "foodName": "Tacos",
+    "foodImage": "https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Mexican",
+    "quantity": 15,
+    "price": 9.99,
+    "addBy": {
+      "name": "Carlos Martinez",
+      "email": "carlosmartinez@example.com"
+    },
+    "foodOrigin": "Mexico",
+    "description": "Mexican dish of corn tortillas filled with various ingredients."
+  },
+  {
+    "foodName": "Butter Chicken",
+    "foodImage": "https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Indian",
+    "quantity": 25,
+    "price": 14.99,
+    "addBy": {
+      "name": "Priya Patel",
+      "email": "priyapatel@example.com"
+    },
+    "foodOrigin": "India",
+    "description": "Popular Indian curry made with spiced tomato and butter sauce."
+  },
+  {
+    "foodName": "Pad Thai",
+    "foodImage": "https://images.pexels.com/photos/1660030/pexels-photo-1660030.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Thai",
+    "quantity": 18,
+    "price": 11.99,
+    "addBy": {
+      "name": "Ananya Chai",
+      "email": "ananyachai@example.com"
+    },
+    "foodOrigin": "Thailand",
+    "description": "Stir-fried rice noodles with tofu, eggs, peanuts, and shrimp."
+  },
+  {
+    "foodName": "Cheeseburger",
+    "foodImage": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "American",
+    "quantity": 30,
+    "price": 8.99,
+    "addBy": {
+      "name": "Mark Johnson",
+      "email": "markjohnson@example.com"
+    },
+    "foodOrigin": "USA",
+    "description": "American sandwich with a beef patty, cheese, and toppings."
+  },
+  {
+    "foodName": "Pho",
+    "foodImage": "https://images.pexels.com/photos/718742/pexels-photo-718742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Vietnamese",
+    "quantity": 12,
+    "price": 13.99,
+    "addBy": {
+      "name": "Nguyen Tran",
+      "email": "nguyentran@example.com"
+    },
+    "foodOrigin": "Vietnam",
+    "description": "Vietnamese soup with broth, rice noodles, herbs, and meat."
+  },
+  {
+    "foodName": "Ramen",
+    "foodImage": "https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Japanese",
+    "quantity": 22,
+    "price": 10.99,
+    "addBy": {
+      "name": "Hiroshi Yamamoto",
+      "email": "hiroshiyamamoto@example.com"
+    },
+    "foodOrigin": "Japan",
+    "description": "Japanese noodle soup with broth, meat, and various toppings."
+  },
+  {
+    "foodName": "Peking Duck",
+    "foodImage": "https://images.pexels.com/photos/769969/pexels-photo-769969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Chinese",
+    "quantity": 8,
+    "price": 24.99,
+    "addBy": {
+      "name": "Li Wei",
+      "email": "liwei@example.com"
+    },
+    "foodOrigin": "China",
+    "description": "Famous Chinese dish with crispy duck skin, pancakes, and sauce."
+  },
+  {
+    "foodName": "Falafel",
+    "foodImage": "https://images.pexels.com/photos/3186654/pexels-photo-3186654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Middle Eastern",
+    "quantity": 28,
+    "price": 6.99,
+    "addBy": {
+      "name": "Aisha Hassan",
+      "email": "aishahassan@example.com"
+    },
+    "foodOrigin": "Middle East",
+    "description": "Deep-fried ball made from ground chickpeas or fava beans."
+  },
+  {
+    "foodName": "Croissant",
+    "foodImage": "https://images.pexels.com/photos/568370/pexels-photo-568370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "French",
+    "quantity": 40,
+    "price": 3.99,
+    "addBy": {
+      "name": "Marie Dubois",
+      "email": "mariedubois@example.com"
+    },
+    "foodOrigin": "France",
+    "description": "Buttery, flaky pastry named for its crescent shape."
+  },
+  {
+    "foodName": "Bratwurst",
+    "foodImage": "https://images.pexels.com/photos/793785/pexels-photo-793785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "German",
+    "quantity": 14,
+    "price": 7.99,
+    "addBy": {
+      "name": "Hans Müller",
+      "email": "hansmuller@example.com"
+    },
+    "foodOrigin": "Germany",
+    "description": "German sausage made from pork, beef, or veal."
+  },
+  {
+    "foodName": "Paella",
+    "foodImage": "https://images.pexels.com/photos/1860208/pexels-photo-1860208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Spanish",
+    "quantity": 16,
+    "price": 18.99,
+    "addBy": {
+      "name": "Maria Garcia",
+      "email": "mariagarcia@example.com"
+    },
+    "foodOrigin": "Spain",
+    "description": "Spanish rice dish with saffron, seafood, chicken, and vegetables."
+  },
+  {
+    "foodName": "Borscht",
+    "foodImage": "https://images.pexels.com/photos/1143754/pexels-photo-1143754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Eastern European",
+    "quantity": 12,
+    "price": 8.49,
+    "addBy": {
+      "name": "Olga Ivanova",
+      "email": "olgaivanova@example.com"
+    },
+    "foodOrigin": "Ukraine",
+    "description": "Eastern European sour soup made with beetroot."
+  },
+  {
+    "foodName": "Kimchi",
+    "foodImage": "https://images.pexels.com/photos/533325/pexels-photo-533325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Korean",
+    "quantity": 35,
+    "price": 4.99,
+    "addBy": {
+      "name": "Ji-Woo Kim",
+      "email": "jiwookim@example.com"
+    },
+    "foodOrigin": "Korea",
+    "description": "Korean side dish of fermented vegetables with seasonings."
+  },
+  {
+    "foodName": "Chicken Shawarma",
+    "foodImage": "https://images.pexels.com/photos/257816/pexels-photo-257816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Middle Eastern",
+    "quantity": 18,
+    "price": 9.99,
+    "addBy": {
+      "name": "Omar Khalid",
+      "email": "omarkhalid@example.com"
+    },
+    "foodOrigin": "Middle East",
+    "description": "Grilled chicken marinated in spices, served in pita with toppings."
+  },
+  {
+    "foodName": "Dim Sum",
+    "foodImage": "https://images.pexels.com/photos/2673353/pexels-photo-2673353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Chinese",
+    "quantity": 20,
+    "price": 14.99,
+    "addBy": {
+      "name": "Xiaoli Zhang",
+      "email": "xiaolizhang@example.com"
+    },
+    "foodOrigin": "China",
+    "description": "Chinese cuisine of bite-sized portions served in small plates."
+  },
+  {
+    "foodName": "Baklava",
+    "foodImage": "https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Middle Eastern",
+    "quantity": 25,
+    "price": 7.99,
+    "addBy": {
+      "name": "Yasmin Fahad",
+      "email": "yasminfahad@example.com"
+    },
+    "foodOrigin": "Turkey",
+    "description": "Sweet pastry made of layers of filo dough filled with nuts."
+  },
+  {
+    "foodName": "Feijoada",
+    "foodImage": "https://images.pexels.com/photos/2233729/pexels-photo-2233729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Brazilian",
+    "quantity": 10,
+    "price": 13.99,
+    "addBy": {
+      "name": "Rafael Silva",
+      "email": "rafaelsilva@example.com"
+    },
+    "foodOrigin": "Brazil",
+    "description": "Brazilian black bean stew with pork or beef, served with rice."
+  },
+  {
+    "foodName": "Poutine",
+    "foodImage": "https://images.pexels.com/photos/2098131/pexels-photo-2098131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Canadian",
+    "quantity": 18,
+    "price": 8.99,
+    "addBy": {
+      "name": "Liam Brown",
+      "email": "liambrown@example.com"
+    },
+    "foodOrigin": "Canada",
+    "description": "Canadian dish of fries topped with cheese curds and gravy."
+  },
+  {
+    "foodName": "Ratatouille",
+    "foodImage": "https://images.pexels.com/photos/1860205/pexels-photo-1860205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "French",
+    "quantity": 15,
+    "price": 10.99,
+    "addBy": {
+      "name": "Sophie Dupont",
+      "email": "sophiedupont@example.com"
+    },
+    "foodOrigin": "France",
+    "description": "French stewed vegetable dish with tomatoes, zucchini, and peppers."
+  },
+  {
+    "foodName": "Jollof Rice",
+    "foodImage": "https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "West African",
+    "quantity": 20,
+    "price": 9.99,
+    "addBy": {
+      "name": "Kofi Mensah",
+      "email": "kofimensah@example.com"
+    },
+    "foodOrigin": "West Africa",
+    "description": "West African dish of rice cooked with tomatoes and spices."
+  },
+  {
+    "foodName": "Hummus",
+    "foodImage": "https://images.pexels.com/photos/233305/pexels-photo-233305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Middle Eastern",
+    "quantity": 30,
+    "price": 5.99,
+    "addBy": {
+      "name": "Nadia Saleh",
+      "email": "nadiasaleh@example.com"
+    },
+    "foodOrigin": "Middle East",
+    "description": "Middle Eastern dip made from mashed chickpeas and tahini."
+  },
+  {
+    "foodName": "Kebab",
+    "foodImage": "https://images.pexels.com/photos/1051399/pexels-photo-1051399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Middle Eastern",
+    "quantity": 22,
+    "price": 11.99,
+    "addBy": {
+      "name": "Ahmed Ali",
+      "email": "ahmedali@example.com"
+    },
+    "foodOrigin": "Middle East",
+    "description": "Grilled or skewered meat dish served with bread or rice."
+  },
+  {
+    "foodName": "Samosa",
+    "foodImage": "https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Indian",
+    "quantity": 50,
+    "price": 2.99,
+    "addBy": {
+      "name": "Ravi Singh",
+      "email": "ravisingh@example.com"
+    },
+    "foodOrigin": "India",
+    "description": "Indian snack of fried pastry with savory filling like spiced potatoes."
+  },
+  {
+    "foodName": "Moussaka",
+    "foodImage": "https://images.pexels.com/photos/434258/pexels-photo-434258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foodCategory": "Greek",
+    "quantity": 12,
+    "price": 12.49,
+    "addBy": {
+      "name": "Elena Papadopoulos",
+      "email": "elenapapadopoulos@example.com"
+    },
+    "foodOrigin": "Greece",
+    "description": "Greek dish of layered eggplant, minced meat, and béchamel sauce."
+  }
+]
