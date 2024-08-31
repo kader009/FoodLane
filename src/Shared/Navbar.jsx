@@ -126,7 +126,7 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content rounded-box w-52"
+                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content rounded-box w-52 bg-gray-950"
               >
                 <li>
                   <Link to="/my-food">My Food</Link>

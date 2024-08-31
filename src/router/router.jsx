@@ -7,6 +7,9 @@ import Login from '../Pages/Account/Login';
 import Register from '../Pages/Account/Register';
 import AllFood from '../Pages/AllFood';
 import Gallery from '../Pages/Gallery';
+import MyFood from '../Pages/profile/MyFood';
+import AddFood from '../Pages/profile/AddFood';
+import MyOrder from '../Pages/profile/MyOrder';
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +28,18 @@ export const router = createBrowserRouter([
       {
         path: '/all-foods',
         element: <AllFood />,
+      },
+      {
+        path: '/my-food',
+        element: <MyFood />,
+      },
+      {
+        path: '/add-food',
+        element: <AddFood />,
+      },
+      {
+        path: '/my-order',
+        element: <MyOrder />,
       },
       {
         path: '/gallery',
