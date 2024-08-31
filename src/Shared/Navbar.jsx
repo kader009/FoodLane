@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
+import useAuth from '../Hooks/useAuth';
 
 const Navbar = () => {
-  const user = {};
+  const { user } = useAuth();
   const logOut = {};
   return (
     <div className="navbar bg-[rgba(8,8,8,7)] sticky top-0 z-10">

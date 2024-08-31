@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Login = () => {
-  const { logIn } = useAuth();
+  const { signIn } = useAuth();
 
   const {
     register,
@@ -13,7 +13,7 @@ const Login = () => {
 
   const onSubmit = (data) => {
     const { email, password } = data;
-    logIn(email, password);
+    signIn(email, password);
   };
 
   return (

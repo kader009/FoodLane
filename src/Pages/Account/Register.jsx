@@ -1,7 +1,18 @@
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 
 const Register = () => {
+  const { createUser,google, github } = useAuth();
+
+  const handleGoogle = () =>{
+    google()
+  }
+
+  const handleGithub = () =>{
+    github()
+  }
+
   const {
     register,
     handleSubmit,
@@ -10,6 +21,8 @@ const Register = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    const { name, email, password } = data;
+    createUser(name, email, password);
   };
 
   return (
@@ -69,7 +82,7 @@ const Register = () => {
 
         <div className="text-center text-white mt-6">
           <p>
-            Already Have an Account 
+            Already Have an Account
             <Link to={'/login'} className="text-blue-800 ms-2">
               Login
             </Link>
@@ -78,6 +91,7 @@ const Register = () => {
 
         <div className="flex justify-between space-x-4">
           <button
+          onClick={() => handleGithub()}
             type="button"
             className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg shadow-md flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200"
           >
@@ -94,6 +108,7 @@ const Register = () => {
           </button>
 
           <button
+          onClick={() => handleGoogle()}
             type="button"
             className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg shadow-md flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200"
           >
