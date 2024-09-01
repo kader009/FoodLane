@@ -2,9 +2,10 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import { useEffect } from 'react';
+import axios from 'axios';
 
 const Login = () => {
-  const { signIn, google, github, user } = useAuth();
+  const { google, github, user } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
   const from = location?.state?.from?.pathname || '/';
@@ -29,9 +30,11 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    const { email, password } = data;
-    signIn(email, password);
+  const onSubmit = async (data) => {
+    const response = await axios.post('http://localhost:5000/login', data);
+
+    console.log(response.data);
+    navigate('/')
   };
 
   return (
@@ -80,7 +83,7 @@ const Login = () => {
         <div className="text-center text-white mt-6">
           <p>
             New To Here
-            <Link to={'/register'} className="text-blue-800 ms-2">
+            <Link to={'/register'} className="text-[#F44336] ms-2">
               Register
             </Link>
           </p>

@@ -2,10 +2,9 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import toast from 'react-hot-toast';
-import axios from 'axios';
 
 const Register = () => {
-  const { createUser, google, github } = useAuth();
+  const { google, github } = useAuth();
 
   const handleGoogle = () => {
     google()
@@ -34,9 +33,9 @@ const Register = () => {
     fetch('http://localhost:5000/user', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json', 
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify({name,email,password}), 
+      body: JSON.stringify({ name, email, password }),
     })
       .then((response) => response.json())
       .then((data) => {
@@ -107,7 +106,7 @@ const Register = () => {
         <div className="text-center text-white mt-6">
           <p>
             Already Have an Account
-            <Link to={'/login'} className="text-blue-800 ms-2">
+            <Link to={'/login'} className="text-[#F44336] ms-2">
               Login
             </Link>
           </p>
