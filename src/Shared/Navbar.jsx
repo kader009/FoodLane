@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 
 const Navbar = () => {
-  const { user,  logOut} = useAuth();
+  const { user, logOut } = useAuth();
 
   return (
     <div className="navbar bg-[rgba(8,8,8,7)] sticky top-0 z-10">
@@ -92,7 +92,7 @@ const Navbar = () => {
               <>
                 <li>
                   <button
-                    onClick={() =>logOut()}
+                    onClick={() => logOut()}
                     className="bg-[#F44336] text-white hover:bg-[#F44336] focus:bg-[#F44336] focus:text-white"
                   >
                     Logout
@@ -102,7 +102,9 @@ const Navbar = () => {
             ) : (
               <>
                 <li>
-                  <Link className="focus:text-white text-white" to="/login">Login</Link>
+                  <Link className="focus:text-white text-white" to="/login">
+                    Login
+                  </Link>
                 </li>
               </>
             )}
@@ -126,16 +128,22 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content rounded-box w-52 bg-gray-950"
+                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content rounded-box w-52 bg-gray-900"
               >
                 <li>
-                  <Link to="/my-food">My Food</Link>
+                  <Link className="focus:text-white" to="/my-food">
+                    My Food
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/add-food">Add Food</Link>
+                  <Link className="focus:text-white" to="/add-food">
+                    Add Food
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/my-order">My Order</Link>
+                  <Link className="focus:text-white" to="/my-order">
+                    My Order
+                  </Link>
                 </li>
                 <li>
                   <button

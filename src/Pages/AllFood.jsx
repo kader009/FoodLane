@@ -36,7 +36,7 @@ const AllFood = () => {
             />
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mx-14">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mx-16">
             {filteredItems.map((food) => (
               <div
                 key={food.id}

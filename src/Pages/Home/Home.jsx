@@ -1,5 +1,6 @@
 import About from '../About/About';
 import Banner from '../Banner';
+import ContactUs from '../ContactUs';
 import OurChefs from '../OurChef';
 import TopFood from '../TopFood';
 
@@ -10,6 +11,7 @@ const Home = () => {
       <About/>
       <TopFood/>
       <OurChefs/>
+      <ContactUs/>
     </div>
   );
 };
