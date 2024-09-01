@@ -5,10 +5,6 @@
     "foodCategory": "Japanese",
     "quantity": 10,
     "price": 15.99,
-    "addBy": {
-      "name": "John Doe",
-      "email": "johndoe@example.com"
-    },
     "foodOrigin": "Japan",
     "description": "Traditional Japanese dish of vinegared rice, raw fish, and vegetables."
   },
@@ -18,10 +14,6 @@
     "foodCategory": "Italian",
     "quantity": 20,
     "price": 12.99,
-    "addBy": {
-      "name": "Jane Smith",
-      "email": "janesmith@example.com"
-    },
     "foodOrigin": "Italy",
     "description": "Classic Italian pizza topped with tomatoes, mozzarella, and basil."
   },
@@ -31,10 +23,6 @@
     "foodCategory": "Mexican",
     "quantity": 15,
     "price": 9.99,
-    "addBy": {
-      "name": "Carlos Martinez",
-      "email": "carlosmartinez@example.com"
-    },
     "foodOrigin": "Mexico",
     "description": "Mexican dish of corn tortillas filled with various ingredients."
   },
@@ -44,10 +32,6 @@
     "foodCategory": "Indian",
     "quantity": 25,
     "price": 14.99,
-    "addBy": {
-      "name": "Priya Patel",
-      "email": "priyapatel@example.com"
-    },
     "foodOrigin": "India",
     "description": "Popular Indian curry made with spiced tomato and butter sauce."
   },
@@ -57,10 +41,6 @@
     "foodCategory": "Thai",
     "quantity": 18,
     "price": 11.99,
-    "addBy": {
-      "name": "Ananya Chai",
-      "email": "ananyachai@example.com"
-    },
     "foodOrigin": "Thailand",
     "description": "Stir-fried rice noodles with tofu, eggs, peanuts, and shrimp."
   },
@@ -70,10 +50,6 @@
     "foodCategory": "American",
     "quantity": 30,
     "price": 8.99,
-    "addBy": {
-      "name": "Mark Johnson",
-      "email": "markjohnson@example.com"
-    },
     "foodOrigin": "USA",
     "description": "American sandwich with a beef patty, cheese, and toppings."
   },
@@ -83,10 +59,6 @@
     "foodCategory": "Vietnamese",
     "quantity": 12,
     "price": 13.99,
-    "addBy": {
-      "name": "Nguyen Tran",
-      "email": "nguyentran@example.com"
-    },
     "foodOrigin": "Vietnam",
     "description": "Vietnamese soup with broth, rice noodles, herbs, and meat."
   },
@@ -96,10 +68,6 @@
     "foodCategory": "Japanese",
     "quantity": 22,
     "price": 10.99,
-    "addBy": {
-      "name": "Hiroshi Yamamoto",
-      "email": "hiroshiyamamoto@example.com"
-    },
     "foodOrigin": "Japan",
     "description": "Japanese noodle soup with broth, meat, and various toppings."
   },
@@ -109,10 +77,6 @@
     "foodCategory": "Chinese",
     "quantity": 8,
     "price": 24.99,
-    "addBy": {
-      "name": "Li Wei",
-      "email": "liwei@example.com"
-    },
     "foodOrigin": "China",
     "description": "Famous Chinese dish with crispy duck skin, pancakes, and sauce."
   },
@@ -122,10 +86,6 @@
     "foodCategory": "Middle Eastern",
     "quantity": 28,
     "price": 6.99,
-    "addBy": {
-      "name": "Aisha Hassan",
-      "email": "aishahassan@example.com"
-    },
     "foodOrigin": "Middle East",
     "description": "Deep-fried ball made from ground chickpeas or fava beans."
   },
@@ -135,10 +95,6 @@
     "foodCategory": "French",
     "quantity": 40,
     "price": 3.99,
-    "addBy": {
-      "name": "Marie Dubois",
-      "email": "mariedubois@example.com"
-    },
     "foodOrigin": "France",
     "description": "Buttery, flaky pastry named for its crescent shape."
   },
@@ -148,10 +104,6 @@
     "foodCategory": "German",
     "quantity": 14,
     "price": 7.99,
-    "addBy": {
-      "name": "Hans Müller",
-      "email": "hansmuller@example.com"
-    },
     "foodOrigin": "Germany",
     "description": "German sausage made from pork, beef, or veal."
   },
@@ -161,10 +113,6 @@
     "foodCategory": "Spanish",
     "quantity": 16,
     "price": 18.99,
-    "addBy": {
-      "name": "Maria Garcia",
-      "email": "mariagarcia@example.com"
-    },
     "foodOrigin": "Spain",
     "description": "Spanish rice dish with saffron, seafood, chicken, and vegetables."
   },
@@ -174,10 +122,6 @@
     "foodCategory": "Eastern European",
     "quantity": 12,
     "price": 8.49,
-    "addBy": {
-      "name": "Olga Ivanova",
-      "email": "olgaivanova@example.com"
-    },
     "foodOrigin": "Ukraine",
     "description": "Eastern European sour soup made with beetroot."
   },
@@ -187,10 +131,6 @@
     "foodCategory": "Korean",
     "quantity": 35,
     "price": 4.99,
-    "addBy": {
-      "name": "Ji-Woo Kim",
-      "email": "jiwookim@example.com"
-    },
     "foodOrigin": "Korea",
     "description": "Korean side dish of fermented vegetables with seasonings."
   },
@@ -200,10 +140,6 @@
     "foodCategory": "Middle Eastern",
     "quantity": 18,
     "price": 9.99,
-    "addBy": {
-      "name": "Omar Khalid",
-      "email": "omarkhalid@example.com"
-    },
     "foodOrigin": "Middle East",
     "description": "Grilled chicken marinated in spices, served in pita with toppings."
   },
@@ -213,10 +149,6 @@
     "foodCategory": "Chinese",
     "quantity": 20,
     "price": 14.99,
-    "addBy": {
-      "name": "Xiaoli Zhang",
-      "email": "xiaolizhang@example.com"
-    },
     "foodOrigin": "China",
     "description": "Chinese cuisine of bite-sized portions served in small plates."
   },
@@ -226,10 +158,6 @@
     "foodCategory": "Middle Eastern",
     "quantity": 25,
     "price": 7.99,
-    "addBy": {
-      "name": "Yasmin Fahad",
-      "email": "yasminfahad@example.com"
-    },
     "foodOrigin": "Turkey",
     "description": "Sweet pastry made of layers of filo dough filled with nuts."
   },
@@ -239,10 +167,6 @@
     "foodCategory": "Brazilian",
     "quantity": 10,
     "price": 13.99,
-    "addBy": {
-      "name": "Rafael Silva",
-      "email": "rafaelsilva@example.com"
-    },
     "foodOrigin": "Brazil",
     "description": "Brazilian black bean stew with pork or beef, served with rice."
   },
@@ -252,10 +176,6 @@
     "foodCategory": "Canadian",
     "quantity": 18,
     "price": 8.99,
-    "addBy": {
-      "name": "Liam Brown",
-      "email": "liambrown@example.com"
-    },
     "foodOrigin": "Canada",
     "description": "Canadian dish of fries topped with cheese curds and gravy."
   },
@@ -265,10 +185,6 @@
     "foodCategory": "French",
     "quantity": 15,
     "price": 10.99,
-    "addBy": {
-      "name": "Sophie Dupont",
-      "email": "sophiedupont@example.com"
-    },
     "foodOrigin": "France",
     "description": "French stewed vegetable dish with tomatoes, zucchini, and peppers."
   },
@@ -278,10 +194,6 @@
     "foodCategory": "West African",
     "quantity": 20,
     "price": 9.99,
-    "addBy": {
-      "name": "Kofi Mensah",
-      "email": "kofimensah@example.com"
-    },
     "foodOrigin": "West Africa",
     "description": "West African dish of rice cooked with tomatoes and spices."
   },
@@ -291,10 +203,6 @@
     "foodCategory": "Middle Eastern",
     "quantity": 30,
     "price": 5.99,
-    "addBy": {
-      "name": "Nadia Saleh",
-      "email": "nadiasaleh@example.com"
-    },
     "foodOrigin": "Middle East",
     "description": "Middle Eastern dip made from mashed chickpeas and tahini."
   },
@@ -304,10 +212,6 @@
     "foodCategory": "Middle Eastern",
     "quantity": 22,
     "price": 11.99,
-    "addBy": {
-      "name": "Ahmed Ali",
-      "email": "ahmedali@example.com"
-    },
     "foodOrigin": "Middle East",
     "description": "Grilled or skewered meat dish served with bread or rice."
   },
@@ -317,10 +221,6 @@
     "foodCategory": "Indian",
     "quantity": 50,
     "price": 2.99,
-    "addBy": {
-      "name": "Ravi Singh",
-      "email": "ravisingh@example.com"
-    },
     "foodOrigin": "India",
     "description": "Indian snack of fried pastry with savory filling like spiced potatoes."
   },
@@ -330,10 +230,6 @@
     "foodCategory": "Greek",
     "quantity": 12,
     "price": 12.49,
-    "addBy": {
-      "name": "Elena Papadopoulos",
-      "email": "elenapapadopoulos@example.com"
-    },
     "foodOrigin": "Greece",
     "description": "Greek dish of layered eggplant, minced meat, and béchamel sauce."
   }

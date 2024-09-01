@@ -22,7 +22,7 @@ const FoodCard = ({ food }) => {
 const Gallery = () => {
   const [foods, seTfoods] = useState([]);
   useEffect(() => {
-    axios.get('data.json').then((res) => seTfoods(res.data));
+    axios.get('http://localhost:5000/foodData').then((res) => seTfoods(res.data));
   }, []);
 
   return (
@@ -32,7 +32,7 @@ const Gallery = () => {
       </h1>
       <div className="flex flex-wrap justify-center">
         {foods.map((food) => (
-          <FoodCard key={food.id} food={food} />
+          <FoodCard key={food._id} food={food} />
         ))}
       </div>
     </div>

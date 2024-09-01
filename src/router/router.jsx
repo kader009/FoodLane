@@ -28,6 +28,7 @@ export const router = createBrowserRouter([
       {
         path: '/all-foods',
         element: <AllFood />,
+        loader: () => fetch(`http://localhost:5000/foodDataCount`)
       },
       {
         path: '/my-food',

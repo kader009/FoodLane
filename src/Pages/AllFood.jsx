@@ -1,13 +1,16 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const AllFood = () => {
   const [foodItems, setFoodItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const { count } = useLoaderData();
+  console.log(count);
 
   useEffect(() => {
     axios
-      .get('data.json')
+      .get('http://localhost:5000/foodData')
       .then((response) => setFoodItems(response.data))
       .catch((error) => console.error('Error fetching food items:', error));
   }, []);
@@ -15,6 +18,12 @@ const AllFood = () => {
   const filteredItems = foodItems.filter((food) =>
     food.foodName.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  const ItemperPage = 5;
+  const numberOfPages = Math.ceil(count / ItemperPage);
+
+  const pages = [...Array(numberOfPages).keys()]
+  console.log(pages);
 
   return (
     <div className="bg-black">
@@ -39,7 +48,7 @@ const AllFood = () => {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mx-16">
             {filteredItems.map((food) => (
               <div
-                key={food.id}
+                key={food._id}
                 className="max-w-lg rounded overflow-hidden shadow-lg bg-gray-950 mx-8 mb-6"
               >
                 <img

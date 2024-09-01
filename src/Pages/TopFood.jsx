@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const TopFood = () => {
   const [foods, SetFoods] = useState([]);
-  axios.get('data.json').then((res) => SetFoods(res.data));
+  axios.get('http://localhost:5000/foodData').then((res) => SetFoods(res.data));
 
   return (
     <div className="bg-black text-center">
@@ -16,7 +16,7 @@ const TopFood = () => {
 
       <div className=" flex items-center justify-center flex-wrap ">
         {foods.slice(0, 6).map((food) => (
-          <div className="max-w-lg rounded overflow-hidden shadow-lg bg-gray-950 mx-8 mb-6">
+          <div className="max-w-lg rounded overflow-hidden shadow-lg bg-gray-950 mx-8 mb-6" key={food._id}>
             <img
               className="w-full h-48 object-cover"
               src={food.foodImage}

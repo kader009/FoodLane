@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import toast from 'react-hot-toast';
+import axios from 'axios';
 
 const Register = () => {
   const { createUser, google, github } = useAuth();
@@ -29,7 +30,23 @@ const Register = () => {
   const onSubmit = (data) => {
     console.log(data);
     const { name, email, password } = data;
-    createUser(name, email, password);
+
+    fetch('http://localhost:5000/user', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json', 
+      },
+      body: JSON.stringify({name,email,password}), 
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success:', data);
+        toast.success('User registered successfully!');
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        toast.error(`Registration failed: ${error.message}`);
+      });
   };
 
   return (
