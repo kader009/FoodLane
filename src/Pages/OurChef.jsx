@@ -1,3 +1,5 @@
+import Container from '../Components/Container';
+
 const chefs = [
   {
     name: 'John Doe',
@@ -30,21 +32,23 @@ const OurChefs = () => {
           Our chef at FoodLane expertly crafts each dish, ensuring every bite is
           a delight.
         </p>
-        <div className="flex flex-wrap justify-center">
-          {chefs.map((chef, index) => (
-            <div key={index} className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
-              <div className="bg-gray-950 rounded-lg shadow-lg p-6">
-                <img
-                  src={chef.image}
-                  alt={chef.name}
-                  className="w-40 h-40 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold mb-2">{chef.name}</h3>
-                <p>{chef.designation}</p>
+        <Container>
+          <div className="flex flex-wrap justify-center">
+            {chefs.map((chef, index) => (
+              <div key={index} className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+                <div className="bg-gray-950 rounded-lg shadow-lg p-6">
+                  <img
+                    src={chef.image}
+                    alt={chef.name}
+                    className="w-40 h-40 rounded-full mx-auto mb-4 object-cover"
+                  />
+                  <h3 className="text-xl font-semibold mb-2">{chef.name}</h3>
+                  <p>{chef.designation}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Container>
       </div>
     </section>
   );

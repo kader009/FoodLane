@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Container from '../Components/Container';
 
 const AllFood = () => {
   const [foodItems, setFoodItems] = useState([]);
@@ -45,36 +46,40 @@ const AllFood = () => {
             />
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mx-16">
-            {filteredItems.map((food) => (
-              <div
-                key={food._id}
-                className="max-w-lg rounded overflow-hidden shadow-lg bg-gray-950 mx-8 mb-6"
-              >
-                <img
-                  className="w-full h-48 object-cover"
-                  src={food.foodImage}
-                  alt={food.foodName}
-                />
-                <div className="px-4 py-6">
-                  <div className="font-bold text-xl mb-2">{food.foodName}</div>
-                  <p className="text-base">Category: {food.foodCategory}</p>
-                  <p className="font-bold mt-2">
-                    Price: ${food.price}
-                  </p>
-                  <p className="text-sm mt-1">Quantity: {food.quantity}</p>
+          <Container>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-center justify-items-center">
+              {filteredItems.map((food) => (
+                <div
+                  key={food._id}
+                  className="w-80 rounded overflow-hidden shadow-lg bg-gray-950 mx-8 mb-6"
+                >
+                  <img
+                    className="w-full h-48 object-cover"
+                    src={food.foodImage}
+                    alt={food.foodName}
+                  />
+                  <div className="px-4 py-6">
+                    <div className="font-bold text-xl mb-2">
+                      {food.foodName}
+                    </div>
+                    <p className="text-base">Category: {food.foodCategory}</p>
+                    <p className="font-bold mt-2">Price: ${food.price}</p>
+                    <p className="text-sm mt-1">Quantity: {food.quantity}</p>
+                  </div>
+                  <div className="px-4 pb-4 flex justify-start">
+                    <button
+                      onClick={() =>
+                        (window.location.href = `/food/${food.id}`)
+                      }
+                      className="bg-[#F44336] hover:bg-blue-700 text-white font-bold py-2 px-6 rounded w-full md:w-auto"
+                    >
+                      Details
+                    </button>
+                  </div>
                 </div>
-                <div className="px-4 pb-4 flex justify-start">
-                  <button
-                    onClick={() => (window.location.href = `/food/${food.id}`)}
-                    className="bg-[#F44336] hover:bg-blue-700 text-white font-bold py-2 px-6 rounded w-full md:w-auto"
-                  >
-                    Details
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </Container>
         </section>
       </div>
     </div>

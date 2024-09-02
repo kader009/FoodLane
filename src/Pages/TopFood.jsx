@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Container from '../Components/Container';
 
 const TopFood = () => {
   const [foods, SetFoods] = useState([]);
@@ -14,28 +15,37 @@ const TopFood = () => {
         flavor. Savor <br /> a culinary journey that delights every bite.
       </p>
 
-      <div className=" flex items-center justify-center flex-wrap ">
-        {foods.slice(0, 6).map((food) => (
-          <div className="max-w-lg rounded overflow-hidden shadow-lg bg-gray-950 mx-8 mb-6" key={food._id}>
-            <img
-              className="w-full h-48 object-cover"
-              src={food.foodImage}
-              alt={food.foodName}
-              loading="lazy"
-            />
-            <div className="px-6 py-6">
-              <div className="font-bold text-xl mb-2 ">{food.foodName}</div>
-              <p className=" text-base">Category: {food.foodCategory}</p>
-              <p className=" font-bold mt-2">Price: ${food.price.toFixed(2)}</p>
+      <Container>
+        <div className=" flex items-center justify-center flex-wrap gap-4 ">
+          {foods.slice(0, 6).map((food) => (
+            <div
+              key={food._id}
+              className="w-96 mx-auto bg-white rounded-xl shadow-md overflow-hidden transform transition-transform hover:scale-105 duration-300 mb-3"
+            >
+              <img
+                src={food.foodImage}
+                alt={food.foodName}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  {food.foodName}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">{food.description}</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-xl font-bold text-gray-800">
+                    ${food.price}
+                  </span>
+                  <button className="flex items-center bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors">
+                    Edit
+                  </button>
+                </div>
+              </div>
             </div>
-            <div className="px-4 pb-4 flex justify-center">
-              <button className="bg-[#F44336] text-white font-bold py-2 px-6 rounded w-full md:w-auto">
-                Details
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </Container>
+
       <div className="text-center py-6">
         <Link to={'/all-foods'}>
           <button className="bg-[#F44336] px-6 py-2 rounded">See All</button>
