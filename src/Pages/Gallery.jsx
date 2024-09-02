@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import LoadingSpinner from '../Components/LoadingSpinner';
 
 const FoodCard = ({ food }) => {
   return (
@@ -21,20 +22,31 @@ const FoodCard = ({ food }) => {
 
 const Gallery = () => {
   const [foods, seTfoods] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    axios.get('http://localhost:5000/foodData').then((res) => seTfoods(res.data));
+    axios.get('http://localhost:5000/foodData').then((res) => {
+      seTfoods(res.data);
+      setLoading(false);
+    });
   }, []);
 
   return (
-    <div className=" bg-black text-white py-8">
+    <div className="bg-black text-white py-8">
       <h1 className="text-4xl font-bold text-center mb-8 text-[#F44336]">
         Food Gallery
       </h1>
-      <div className="flex flex-wrap justify-center">
-        {foods.map((food) => (
-          <FoodCard key={food._id} food={food} />
-        ))}
-      </div>
+      {loading ? (
+        <div className="text-center">
+          <LoadingSpinner />
+        </div>
+      ) : (
+        <div className="flex flex-wrap justify-center">
+          {foods.map((food) => (
+            <FoodCard key={food._id} food={food} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

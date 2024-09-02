@@ -5,8 +5,8 @@ import { useLoaderData } from 'react-router-dom';
 const AllFood = () => {
   const [foodItems, setFoodItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const { count } = useLoaderData();
-  console.log(count);
+  // const { count } = useLoaderData();
+  // console.log(count);
 
   useEffect(() => {
     axios
@@ -19,11 +19,11 @@ const AllFood = () => {
     food.foodName.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const ItemperPage = 5;
-  const numberOfPages = Math.ceil(count / ItemperPage);
+  // const ItemperPage = 5;
+  // const numberOfPages = Math.ceil(count / ItemperPage);
 
-  const pages = [...Array(numberOfPages).keys()]
-  console.log(pages);
+  // const pages = [...Array(numberOfPages).keys()]
+  // console.log(pages);
 
   return (
     <div className="bg-black">
@@ -60,7 +60,7 @@ const AllFood = () => {
                   <div className="font-bold text-xl mb-2">{food.foodName}</div>
                   <p className="text-base">Category: {food.foodCategory}</p>
                   <p className="font-bold mt-2">
-                    Price: ${food.price.toFixed(2)}
+                    Price: ${food.price}
                   </p>
                   <p className="text-sm mt-1">Quantity: {food.quantity}</p>
                 </div>
