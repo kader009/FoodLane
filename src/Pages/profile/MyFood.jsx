@@ -2,6 +2,7 @@ import axios from 'axios';
 import useAuth from '../../Hooks/useAuth';
 import { useState, useEffect } from 'react';
 import Container from '../../Components/Container';
+import { Link } from 'react-router-dom';
 
 const MyFood = () => {
   const { user } = useAuth();
@@ -50,7 +51,7 @@ const MyFood = () => {
                     ${food.price}
                   </span>
                   <button className="flex items-center bg-[#F44336] text-white px-4 py-2 rounded hover:bg-green-600 transition-colors">
-                    Update Item
+                    <Link to={`editItem/${food._id}`}>Update Item</Link>
                   </button>
                 </div>
               </div>

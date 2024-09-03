@@ -11,15 +11,16 @@ import MyFood from '../Pages/profile/MyFood';
 import AddFood from '../Pages/profile/AddFood';
 import MyOrder from '../Pages/profile/MyOrder';
 import SingleFood from '../Pages/SingleFood';
+import EditItem from '../Pages/EditItem';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <MainLayout />,
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
-        index:true,
+        index: true,
         element: <Home />,
       },
       {
@@ -33,6 +34,12 @@ export const router = createBrowserRouter([
       {
         path: '/my-food',
         element: <MyFood />,
+      },
+      {
+        path: 'my-food/editItem/:id',
+        element: <EditItem />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/foodData/get/${params.id}`),
       },
       {
         path: '/add-food',
