@@ -61,8 +61,9 @@ const AllFood = () => {
                     <p className="text-sm mt-1">Quantity: {food.quantity}</p>
                   </div>
                   <div className="px-4 pb-4 flex justify-start">
-                    <button className="bg-[#F44336] hover:bg-blue-700 text-white font-bold py-2 px-6 rounded w-full md:w-auto">
+                    <button className="bg-[#F44336] hover:bg-blue-700 text-white font-bold py-2 px-6 rounded w-full md:w-auto ">
                       <Link to={`/single-food/${food._id}`}>Detail</Link>
+                      
                     </button>
                   </div>
                 </div>

@@ -3,13 +3,56 @@ import { useLoaderData } from 'react-router-dom';
 const EditItem = () => {
   const { foodName, _id, price, description, foodImage, quantity, foodOrigin } =
     useLoaderData();
-  // console.log(_id);
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const foodName = form.foodName.value;
+    const description = form.description.value;
+    const foodImage = form.foodImage.value;
+    const quantity = form.quantity.value;
+    const foodOrigin = form.foodOrigin.value;
+    const price = form.price.value;
+
+    const foodValue = {
+      foodName,
+      price,
+      description,
+      foodImage,
+      quantity,
+      foodOrigin,
+    };
+
+    // console.log(foodValue);
+
+    fetch(`http://localhost:5000/foodData/${_id}`, {
+      method: "PATCH", // <-- Move method out of headers
+      headers: {
+        'Content-Type': 'application/json', // Fix content-type capitalization
+      },
+      body: JSON.stringify(foodValue),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        // Handle success (e.g., display a success message or redirect)
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        // Handle errors
+      });
+  };
+
   return (
     <div className="container mx-auto bg-black pb-4">
       <h1 className="text-3xl font-bold text-center my-8 text-[#F44336]">
         Edit Food Item
       </h1>
-      <form className="max-w-lg mx-auto bg-gray-950 p-5 rounded">
+      <form
+        onSubmit={handleUpdate}
+        className="max-w-lg mx-auto bg-gray-950 p-5 rounded"
+      >
         <div className="mb-4">
           <label className="block text-white text-sm font-bold mb-2">
             Food Name
@@ -59,7 +102,7 @@ const EditItem = () => {
           </label>
           <input
             type="text"
-            name="foodImage"
+            name="foodOrigin"
             defaultValue={foodOrigin}
             className="w-full px-3 py-2 border rounded-md bg-black"
           />
@@ -70,7 +113,7 @@ const EditItem = () => {
           </label>
           <input
             type="text"
-            name="foodImage"
+            name="quantity"
             defaultValue={quantity}
             className="w-full px-3 py-2 border rounded-md bg-black"
           />

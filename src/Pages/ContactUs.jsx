@@ -31,7 +31,9 @@ const ContactUs = () => {
         <div className="space-y-8">
           <h1 className="text-4xl font-bold">Contact Us</h1>
           <p>
-            We're here to help! If you have any questions, comments, or concerns, please don't hesitate to reach out to us. Your feedback is important to us.
+            We're here to help! If you have any questions, comments, or
+            concerns, please don't hesitate to reach out to us. Your feedback is
+            important to us.
           </p>
           <div>
             <h2 className="text-2xl font-semibold">Contact Information</h2>
@@ -57,9 +59,15 @@ const ContactUs = () => {
           <div>
             <h2 className="text-2xl font-semibold">Follow Us</h2>
             <div className="flex space-x-4 mt-2">
-              <a href="#" className="text-white hover:underline">Facebook</a>
-              <a href="#" className="text-white hover:underline">Instagram</a>
-              <a href="#" className="text-white hover:underline">Twitter</a>
+              <a href="#" className="text-white hover:underline">
+                Facebook
+              </a>
+              <a href="#" className="text-white hover:underline">
+                Instagram
+              </a>
+              <a href="#" className="text-white hover:underline">
+                Twitter
+              </a>
             </div>
           </div>
         </div>
@@ -99,9 +107,25 @@ const ContactUs = () => {
             />
             <button
               type="submit"
-              className="w-full py-3 bg-[#F44336] text-white font-bold rounded hover:bg-red-600"
+              className="w-full py-3 flex justify-center items-center bg-[#F44336] text-white font-bold rounded hover:bg-red-600"
             >
               Send
+              <div className='ms-2'>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                  />
+                </svg>
+              </div>
             </button>
           </form>
         </div>
