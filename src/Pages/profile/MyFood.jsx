@@ -23,6 +23,11 @@ const MyFood = () => {
 
   return (
     <div className="bg-black">
+      <div className='text-center my-6'>
+
+      <h1 className='text-3xl font-bold text-[#F44336]'>My Added Food</h1>
+      <p className='capitalize text-lg'>Here is the list of food that i want to eat</p>
+      </div>
       <Container>
         <div className="flex justify-center items-center flex-wrap gap-4  mx-auto">
           {foods.map((food) => (
@@ -44,8 +49,8 @@ const MyFood = () => {
                   <span className="text-xl font-bold text-gray-800">
                     ${food.price}
                   </span>
-                  <button className="flex items-center bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors">
-                    Edit
+                  <button className="flex items-center bg-[#F44336] text-white px-4 py-2 rounded hover:bg-green-600 transition-colors">
+                    Update Item
                   </button>
                 </div>
               </div>

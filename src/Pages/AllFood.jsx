@@ -1,13 +1,11 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { useLoaderData } from 'react-router-dom';
 import Container from '../Components/Container';
+import { Link } from 'react-router-dom';
 
 const AllFood = () => {
   const [foodItems, setFoodItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  // const { count } = useLoaderData();
-  // console.log(count);
 
   useEffect(() => {
     axios
@@ -19,12 +17,6 @@ const AllFood = () => {
   const filteredItems = foodItems.filter((food) =>
     food.foodName.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
-  // const ItemperPage = 5;
-  // const numberOfPages = Math.ceil(count / ItemperPage);
-
-  // const pages = [...Array(numberOfPages).keys()]
-  // console.log(pages);
 
   return (
     <div className="bg-black">
@@ -51,7 +43,7 @@ const AllFood = () => {
               {filteredItems.map((food) => (
                 <div
                   key={food._id}
-                  className="w-80 rounded overflow-hidden shadow-lg bg-gray-950 mx-8 mb-6"
+                  className="w-[22rem] rounded overflow-hidden shadow-lg bg-white text-black mx-8 mb-6"
                 >
                   <img
                     className="w-full h-48 object-cover"
@@ -63,17 +55,14 @@ const AllFood = () => {
                       {food.foodName}
                     </div>
                     <p className="text-base">Category: {food.foodCategory}</p>
-                    <p className="font-bold mt-2">Price: ${food.price}</p>
+                    <p className="font-bold mt-2 text-[#F44336]">
+                      Price: ${food.price}
+                    </p>
                     <p className="text-sm mt-1">Quantity: {food.quantity}</p>
                   </div>
                   <div className="px-4 pb-4 flex justify-start">
-                    <button
-                      onClick={() =>
-                        (window.location.href = `/food/${food.id}`)
-                      }
-                      className="bg-[#F44336] hover:bg-blue-700 text-white font-bold py-2 px-6 rounded w-full md:w-auto"
-                    >
-                      Details
+                    <button className="bg-[#F44336] hover:bg-blue-700 text-white font-bold py-2 px-6 rounded w-full md:w-auto">
+                      <Link to={`/single-food/${food._id}`}>Detail</Link>
                     </button>
                   </div>
                 </div>

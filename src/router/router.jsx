@@ -10,6 +10,7 @@ import Gallery from '../Pages/Gallery';
 import MyFood from '../Pages/profile/MyFood';
 import AddFood from '../Pages/profile/AddFood';
 import MyOrder from '../Pages/profile/MyOrder';
+import SingleFood from '../Pages/SingleFood';
 
 export const router = createBrowserRouter([
   {
@@ -28,7 +29,6 @@ export const router = createBrowserRouter([
       {
         path: '/all-foods',
         element: <AllFood />,
-        loader: () => fetch(`http://localhost:5000/foodDataCount`)
       },
       {
         path: '/my-food',
@@ -41,6 +41,10 @@ export const router = createBrowserRouter([
       {
         path: '/my-order',
         element: <MyOrder />,
+      },
+      {
+        path: 'single-food/:id',
+        element: <SingleFood />,
       },
       {
         path: '/gallery',

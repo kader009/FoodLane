@@ -3,7 +3,7 @@ const About = () => {
     <section className="flex flex-col lg:flex-row items-center justify-center min-h-screen text-white px-6 lg:px-20 py-12 bg-black">
       <div className="lg:w-1/2 flex justify-center mb-10 lg:mb-0">
         <img
-          src="https://images.pexels.com/photos/14786462/pexels-photo-14786462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="https://images.pexels.com/photos/10927834/pexels-photo-10927834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="FoodLane Restaurant"
           className="rounded-lg shadow-lg w-full h-full object-cover"
         />

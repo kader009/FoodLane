@@ -26,6 +26,7 @@ const TopFood = () => {
                 src={food.foodImage}
                 alt={food.foodName}
                 className="w-full h-48 object-cover"
+                loading='lazy'
               />
               <div className="p-4">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
@@ -36,8 +37,8 @@ const TopFood = () => {
                   <span className="text-xl font-bold text-gray-800">
                     ${food.price}
                   </span>
-                  <button className="flex items-center bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors">
-                    Edit
+                  <button className="flex items-center bg-[#F44336] text-white px-4 py-2 rounded hover:bg-green-600 transition-colors">
+                    <Link to={`/single-food/${food._id}`}>Detail</Link>
                   </button>
                 </div>
               </div>
