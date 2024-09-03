@@ -12,6 +12,7 @@ import AddFood from '../Pages/profile/AddFood';
 import MyOrder from '../Pages/profile/MyOrder';
 import SingleFood from '../Pages/SingleFood';
 import EditItem from '../Pages/EditItem';
+import PurchasePage from '../Pages/PurchasePage';
 
 export const router = createBrowserRouter([
   {
@@ -52,6 +53,12 @@ export const router = createBrowserRouter([
       {
         path: 'single-food/:id',
         element: <SingleFood />,
+      },
+      {
+        path: '/purchase/:id',
+        element: <PurchasePage />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/foodData/get/${params.id}`),
       },
       {
         path: '/gallery',
