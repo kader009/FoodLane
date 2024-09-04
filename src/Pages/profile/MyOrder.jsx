@@ -3,7 +3,7 @@ import useAuth from '../../Hooks/useAuth';
 
 const MyOrder = () => {
   const { user } = useAuth();
-  const [foods, SetFood] = useState([])
+  const [foods, SetFood] = useState([]);
 
   fetch(`http://localhost:5000/orders?email=${user?.email}`)
     .then((res) => res.json())
@@ -31,19 +31,21 @@ const MyOrder = () => {
             </tr>
           </thead>
           <tbody>
-            {foods.map(food => (
+            {foods.map((food) => (
               <tr key={food._id}>
-                <td className="px-4 py-2 border">
-                  <img src={food.foodImage} alt={food.foodName} className="w-20 h-20 object-cover rounded-full" />
+                <td className="px-4 py-2 border flex justify-center items-center">
+                  <img
+                    src={food.foodImage}
+                    alt={food.foodName}
+                    className="w-20 h-20 object-cover rounded-full"
+                  />
                 </td>
-                <td className="px-4 py-2 border">{food.foodName}</td>
-                <td className="px-4 py-2 border">{food.price}</td>
-                <td className="px-4 py-2 border">{food.Date}</td>
-                <td className="px-4 py-2 border">{food.buyerName}</td>
-                <td className="px-4 py-2 border">
-                  <button
-                    className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
-                  >
+                <td className="px-4 py-2 border text-center">{food.foodName}</td>
+                <td className="px-4 py-2 border text-center">{food.price}</td>
+                <td className="px-4 py-2 border text-center">{food.Date}</td>
+                <td className="px-4 py-2 border text-center">{food.buyerName}</td>
+                <td className="px-4 py-2 border text-center">
+                  <button className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
                     Delete
                   </button>
                 </td>
