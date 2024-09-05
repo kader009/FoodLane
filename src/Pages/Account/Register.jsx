@@ -4,7 +4,7 @@ import useAuth from '../../Hooks/useAuth';
 import toast from 'react-hot-toast';
 
 const Register = () => {
-  const { google, github } = useAuth();
+  const { google, github, createUser } = useAuth();
 
   const handleGoogle = () => {
     google()
@@ -29,23 +29,24 @@ const Register = () => {
   const onSubmit = (data) => {
     console.log(data);
     const { name, email, password } = data;
+    createUser(email, password);
 
-    fetch('http://localhost:5000/user', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, email, password }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log('Success:', data);
-        toast.success('User registered successfully!');
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        toast.error(`Registration failed: ${error.message}`);
-      });
+    // fetch('http://localhost:5000/user', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({ name, email, password }),
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     console.log('Success:', data);
+    //     toast.success('User registered successfully!');
+    //   })
+    //   .catch((error) => {
+    //     console.error('Error:', error);
+    //     toast.error(`Registration failed: ${error.message}`);
+    //   });
   };
 
   return (

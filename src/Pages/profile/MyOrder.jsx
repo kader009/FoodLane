@@ -1,61 +1,66 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useAuth from '../../Hooks/useAuth';
 
 const MyOrder = () => {
   const { user } = useAuth();
   const [foods, SetFood] = useState([]);
 
-  fetch(`http://localhost:5000/orders?email=${user?.email}`)
-    .then((res) => res.json())
-    .then((data) => {
-      SetFood(data);
-      console.log(data);
+  useEffect(() => {
+    fetch(`http://localhost:5000/orders?email=${user?.email}`, {credentials:'include'})
+      .then((res) => res.json())
+      .then((data) => {
+        SetFood(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [user?.email]);
+
+  const handleDelete = (id) => {
+    fetch(`http://localhost:5000/orders/${id}`, {
+      method: "DELETE",
     })
-    .catch((error) => {
-      console.log(error);
-    });
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount > 0) {
+          SetFood(foods.filter(food => food._id !== id));
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
-    <div className=" mx-4 py-8">
-      <h1 className="text-2xl font-bold mb-4">My Orders</h1>
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-black border border-gray-200">
-          <thead>
-            <tr>
-              <th className="px-4 py-2 border">Image</th>
-              <th className="px-4 py-2 border">Name</th>
-              <th className="px-4 py-2 border">Price</th>
-              <th className="px-4 py-2 border">Added Time</th>
-              <th className="px-4 py-2 border">Food Owner</th>
-              <th className="px-4 py-2 border">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {foods.map((food) => (
-              <tr key={food._id}>
-                <td className="px-4 py-2 border flex justify-center items-center">
-                  <img
-                    src={food.foodImage}
-                    alt={food.foodName}
-                    className="w-20 h-20 object-cover rounded-full"
-                  />
-                </td>
-                <td className="px-4 py-2 border text-center">{food.foodName}</td>
-                <td className="px-4 py-2 border text-center">{food.price}</td>
-                <td className="px-4 py-2 border text-center">{food.Date}</td>
-                <td className="px-4 py-2 border text-center">{food.buyerName}</td>
-                <td className="px-4 py-2 border text-center">
-                  <button className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+
+    <div className="mx-4 my-12">
+      <h1 className="text-2xl font-bold mb-4 text-white">My Orders</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
+        {foods.map((food) => (
+          <div
+            key={food._id}
+            className="bg-white text-black rounded-lg p-4 shadow-lg flex flex-col flex-wrap items-center"
+          >
+            <img
+              src={food.foodImage}
+              alt={food.foodName}
+              className="w-32 h-32 object-cover rounded-full mb-4"
+            />
+            <h2 className="text-xl font-semibold mb-2">{food.foodName}</h2>
+            <p className="mb-2">$ {food.price}</p>
+            <p className="text-sm mb-2">{food.Date}</p>
+            <p className="text-sm mb-4">Owner: {food.buyerName}</p>
+            <button
+              onClick={() => handleDelete(food._id)}
+              className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+            >
+              Delete
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default MyOrder;
+export default MyOrder;  

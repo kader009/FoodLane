@@ -6,17 +6,34 @@ import { Link } from 'react-router-dom';
 const AllFood = () => {
   const [foodItems, setFoodItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/foodData')
-      .then((response) => setFoodItems(response.data))
+      .get(`http://localhost:5000/foodData?page=${page}&limit=6`)
+      .then((response) => {
+        setFoodItems(response.data.foods);
+        setTotalPages(response.data.totalPages);
+      })
       .catch((error) => console.error('Error fetching food items:', error));
-  }, []);
+  }, [page]);
 
   const filteredItems = foodItems.filter((food) =>
     food.foodName.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  const handleNextPage = () => {
+    if (page < totalPages) {
+      setPage(page + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (page > 1) {
+      setPage(page - 1);
+    }
+  };
 
   return (
     <div className="bg-black">
@@ -63,13 +80,31 @@ const AllFood = () => {
                   <div className="px-4 pb-4 flex justify-start">
                     <button className="bg-[#F44336] hover:bg-blue-700 text-white font-bold py-2 px-6 rounded w-full md:w-auto ">
                       <Link to={`/single-food/${food._id}`}>Detail</Link>
-                      
                     </button>
                   </div>
                 </div>
               ))}
             </div>
           </Container>
+
+          {/* Pagination Controls */}
+          <div className="flex justify-center items-center mt-6">
+            <button
+              onClick={handlePreviousPage}
+              disabled={page === 1}
+              className="bg-[#F44336] text-white px-4 py-2 rounded mx-2 disabled:opacity-50"
+            >
+              Previous
+            </button>
+            <span>{`Page ${page} of ${totalPages}`}</span>
+            <button
+              onClick={handleNextPage}
+              disabled={page === totalPages}
+              className="bg-[#F44336] text-white px-4 py-2 rounded mx-2 disabled:opacity-50"
+            >
+              Next
+            </button>
+          </div>
         </section>
       </div>
     </div>

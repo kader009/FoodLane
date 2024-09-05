@@ -1,11 +1,20 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Container from '../Components/Container';
 
 const TopFood = () => {
   const [foods, SetFoods] = useState([]);
-  axios.get('http://localhost:5000/foodData').then((res) => SetFoods(res.data));
+
+  useEffect(() => {
+    axios
+      .get('http://localhost:5000/foodData')
+      .then((res) => {
+        console.log(res.data); // Log the data to check its structure
+        SetFoods(res.data.foods || []); // Ensure it's an array
+      })
+      .catch((error) => console.error('Error fetching food items:', error));
+  }, []);
 
   return (
     <div className="bg-black text-center">

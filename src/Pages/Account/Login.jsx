@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 
 const Login = () => {
-  const { google, github, user } = useAuth();
+  const { google, github, user, signIn } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
   const from = location?.state?.from?.pathname || '/';
@@ -31,10 +31,22 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    const response = await axios.post('http://localhost:5000/login', data);
+    const { email, password } = data;
+    signIn(email, password).then((res) => {
+      const loggedUser = res.user;
+      console.log(loggedUser);
+      const user = { email };
 
-    console.log(response.data);
-    navigate('/')
+      axios
+        .post('http://localhost:5000/jwt', user, { withCredentials: true })
+        .then((res) => {
+          console.log(res.data);
+        });
+    });
+    // const response = await axios.post('http://localhost:5000/login', data);
+
+    // console.log(response.data);
+    // navigate('/')
   };
 
   return (

@@ -26,7 +26,7 @@ const Gallery = () => {
 
   useEffect(() => {
     axios.get('http://localhost:5000/foodData').then((res) => {
-      seTfoods(res.data);
+      seTfoods(res.data.foods || []);
       setLoading(false);
     });
   }, []);

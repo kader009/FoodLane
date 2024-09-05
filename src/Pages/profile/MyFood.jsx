@@ -13,7 +13,7 @@ const MyFood = () => {
       try {
         const url = `http://localhost:5000/foodData?email=${user?.email}`;
         const response = await axios.get(url);
-        setFoods(response.data);
+        setFoods(response.data.foods || []);
       } catch (error) {
         console.error('Error fetching food data:', error);
       }
