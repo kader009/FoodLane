@@ -8,15 +8,21 @@ const AllFood = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [loading, setLoading] = useState(false); 
 
   useEffect(() => {
+    setLoading(true); 
     axios
       .get(`http://localhost:5000/foodData?page=${page}&limit=6`)
       .then((response) => {
         setFoodItems(response.data.foods);
         setTotalPages(response.data.totalPages);
+        setLoading(false); 
       })
-      .catch((error) => console.error('Error fetching food items:', error));
+      .catch((error) => {
+        console.error('Error fetching food items:', error);
+        setLoading(false); 
+      });
   }, [page]);
 
   const filteredItems = foodItems.filter((food) =>
@@ -42,10 +48,10 @@ const AllFood = () => {
           <h1 className="text-4xl font-bold text-[#F44336]">
             Food Listing Page
           </h1>
-          <p className='capitalize my-4'>We provite best food items for our customer</p>
+          <p className='capitalize mt-3 text-lg' >We provide the best food items for our customers</p>
         </header>
 
-        <section className="container mx-auto py-4">
+        <section className="container mx-auto py-2">
           <div className="mb-6 text-center">
             <input
               type="text"
@@ -56,40 +62,47 @@ const AllFood = () => {
             />
           </div>
 
-          <Container>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-center justify-items-center">
-              {filteredItems.map((food) => (
-                <div
-                  key={food._id}
-                  className="w-[22rem] rounded overflow-hidden shadow-lg bg-white text-black mx-8 mb-6"
-                >
-                  <img
-                    className="w-full h-48 object-cover"
-                    src={food.foodImage}
-                    alt={food.foodName}
-                  />
-                  <div className="px-4 py-6">
-                    <div className="font-bold text-xl mb-2">
-                      {food.foodName}
-                    </div>
-                    <p className="text-base">Category: {food.foodCategory}</p>
-                    <p className="font-bold mt-2 text-[#F44336]">
-                      Price: ${food.price}
-                    </p>
-                    <p className="text-sm mt-1">Quantity: {food.quantity}</p>
-                  </div>
-                  <div className="px-4 pb-4 flex justify-start">
-                    <button className="bg-[#F44336] hover:bg-[#D32F2F] text-white font-bold py-2 px-6 rounded w-full md:w-auto ">
-                      <Link to={`/single-food/${food._id}`}>Detail</Link>
-                    </button>
-                  </div>
-                </div>
-              ))}
+          {/* Loading Spinner */}
+          {loading ? (
+            <div className="flex justify-center items-center">
+              <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full border-t-[#F44336]"></div>
             </div>
-          </Container>
+          ) : (
+            <Container>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-center justify-items-center">
+                {filteredItems.map((food) => (
+                  <div
+                    key={food._id}
+                    className="w-[22rem] rounded overflow-hidden shadow-lg bg-white text-black mx-8 mb-6"
+                  >
+                    <img
+                      className="w-full h-48 object-cover"
+                      src={food.foodImage}
+                      alt={food.foodName}
+                    />
+                    <div className="px-4 py-6">
+                      <div className="font-bold text-xl mb-2">
+                        {food.foodName}
+                      </div>
+                      <p className="text-base">Category: {food.foodCategory}</p>
+                      <p className="font-bold mt-2 text-[#F44336]">
+                        Price: ${food.price}
+                      </p>
+                      <p className="text-sm mt-1">Quantity: {food.quantity}</p>
+                    </div>
+                    <div className="px-4 pb-4 flex justify-start">
+                      <button className="bg-[#F44336] hover:bg-[#D32F2F] text-white font-bold py-2 px-6 rounded w-full md:w-auto ">
+                        <Link to={`/single-food/${food._id}`}>Detail</Link>
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Container>
+          )}
 
           {/* Pagination Controls */}
-          <div className="flex justify-center items-center mt-6">
+          <div className="flex justify-center items-center my-4">
             <button
               onClick={handlePreviousPage}
               disabled={page === 1}

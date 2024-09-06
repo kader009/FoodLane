@@ -37,19 +37,22 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-gray-900 rounded-box w-52"
           >
             <li>
-              <Link to="/">Home</Link>
+              <Link className="focus:text-white" to="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/all-foods">All Foods</Link>
+              <Link className="focus:text-white" to="/all-foods">
+                All Foods
+              </Link>
             </li>
             <li>
-              <Link to="/gallery">Gallery</Link>
+              <Link className="focus:text-white" to="/gallery">
+                Gallery
+              </Link>
             </li>
             {user ? (
               <>
-                <li>
-                  <Link to="/dashboard/profile">My Profile</Link>
-                </li>
                 <li>
                   <button
                     onClick={logOut}
