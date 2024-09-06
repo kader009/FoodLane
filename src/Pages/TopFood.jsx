@@ -74,35 +74,7 @@ const TopFood = () => {
 
       <div className="text-center py-6">
         <Link to={'/all-foods'}>
-          <button className="bg-[#F44336] px-6 py-2 rounded">
-            <div className="flex justify-center items-center">
-              <div>See All</div>
-              <div>
-                <div className="ms-2 ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M2.458 12C3.732 7.943 7.522 5 12 5c4.478 0 8.268 2.943 9.542 7-.714 2.064-2.34 3.796-4.528 4.597A11.983 11.983 0 0112 19c-4.478 0-8.268-2.943-9.542-7z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </button>
+          <button className="bg-[#F44336] px-6 py-2 rounded">See All</button>
         </Link>
       </div>
     </div>
