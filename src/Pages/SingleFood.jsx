@@ -50,7 +50,7 @@ const SingleFood = () => {
               Price: ${food.price}
             </span>
 
-            <button className="flex items-center bg-[#F44336] text-white px-4 py-2 rounded hover:bg-green-600 transition-colors">
+            <button className="flex items-center bg-[#F44336] text-white px-4 py-2 rounded hover:bg-[#D32F2F] transition-colors">
               <Link to={`/purchase/${food._id}`}>
                 <div className="flex justify-center items-center">
                   <div>Purchase</div>

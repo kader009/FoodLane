@@ -120,7 +120,7 @@ const EditItem = () => {
         </div>
         <button
           type="submit"
-          className="bg-[#F44336] text-white px-4 py-2 rounded hover:bg-green-600 transition-colors"
+          className="bg-[#F44336] text-white px-4 py-2 rounded hover:bg-[#D32F2F] transition-colors"
         >
           Update Item
         </button>

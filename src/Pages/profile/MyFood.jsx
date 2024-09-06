@@ -51,7 +51,7 @@ const MyFood = () => {
                   <span className="text-xl font-bold text-gray-800">
                     ${food.price}
                   </span>
-                  <button className="flex items-center bg-[#F44336] text-white px-4 py-2 rounded hover:bg-green-600 transition-colors">
+                  <button className="flex items-center bg-[#F44336] text-white px-4 py-2 rounded hover:bg-[#D32F2F] transition-colors">
                     <Link to={`editItem/${food._id}`}>Update Item</Link>
                     <div className='ms-2'>
                       <svg

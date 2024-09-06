@@ -38,10 +38,11 @@ const AllFood = () => {
   return (
     <div className="bg-black">
       <div className=" bg-black text-white">
-        <header className=" py-6 text-center">
+        <header className=" py-4 text-center">
           <h1 className="text-4xl font-bold text-[#F44336]">
             Food Listing Page
           </h1>
+          <p className='capitalize my-4'>We provite best food items for our customer</p>
         </header>
 
         <section className="container mx-auto py-4">
@@ -78,7 +79,7 @@ const AllFood = () => {
                     <p className="text-sm mt-1">Quantity: {food.quantity}</p>
                   </div>
                   <div className="px-4 pb-4 flex justify-start">
-                    <button className="bg-[#F44336] hover:bg-blue-700 text-white font-bold py-2 px-6 rounded w-full md:w-auto ">
+                    <button className="bg-[#F44336] hover:bg-[#D32F2F] text-white font-bold py-2 px-6 rounded w-full md:w-auto ">
                       <Link to={`/single-food/${food._id}`}>Detail</Link>
                     </button>
                   </div>

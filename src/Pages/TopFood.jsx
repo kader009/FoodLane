@@ -10,8 +10,7 @@ const TopFood = () => {
     axios
       .get('http://localhost:5000/foodData')
       .then((res) => {
-        console.log(res.data); // Log the data to check its structure
-        SetFoods(res.data.foods || []); // Ensure it's an array
+        SetFoods(res.data.foods || []);
       })
       .catch((error) => console.error('Error fetching food items:', error));
   }, []);
@@ -46,7 +45,7 @@ const TopFood = () => {
                   <span className="text-xl font-bold text-gray-800">
                     ${food.price}
                   </span>
-                  <button className="flex items-center bg-[#F44336] text-white px-4 py-2 rounded hover:bg-green-600 transition-colors">
+                  <button className="flex items-center bg-[#F44336] text-white px-4 py-2 rounded hover:bg-[#D32F2F] transition-colors">
                     <Link to={`/single-food/${food._id}`}>Detail</Link>
                     <div className="ms-2">
                       <svg
