@@ -1,4 +1,5 @@
 import Container from '../Components/Container';
+import { FaStar } from 'react-icons/fa';
 
 const chefs = [
   {
@@ -6,18 +7,21 @@ const chefs = [
     designation: 'Head Chef',
     image:
       'https://mir-s3-cdn-cf.behance.net/projects/404/94fafc78689473.Y3JvcCwxMzY2LDEwNjgsMCwyMzM.jpg',
+    rating: 5,
   },
   {
     name: 'Jane Smith',
     designation: 'Sous Chef',
     image:
       'https://img.freepik.com/premium-photo/chef-woman-wearing-white-uniform-dark-background-generative-ai_58409-30398.jpg',
+    rating: 4,
   },
   {
     name: 'Emily Johnson',
     designation: 'Pastry Chef',
     image:
       'https://us.123rf.com/450wm/serezniy/serezniy1809/serezniy180939857/110126965-african-american-chef-in-uniform-on-dark-background.jpg?ver=6',
+    rating: 4,
   },
 ];
 
@@ -29,21 +33,40 @@ const OurChefs = () => {
           Meet Our Chefs
         </h2>
         <p className="mb-6">
-          Our chef at FoodLane expertly crafts each dish, ensuring every bite is
+          Our chefs at FoodLane expertly craft each dish, ensuring every bite is
           a delight.
         </p>
         <Container>
           <div className="flex flex-wrap justify-center">
             {chefs.map((chef, index) => (
-              <div key={index} className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
-                <div className="bg-gray-950 rounded-lg shadow-lg p-6">
+              <div
+                key={index}
+                className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8"
+              >
+                <div className="bg-gray-950 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   <img
                     src={chef.image}
                     alt={chef.name}
                     className="w-40 h-40 rounded-full mx-auto mb-4 object-cover"
                   />
-                  <h3 className="text-xl font-semibold mb-2">{chef.name}</h3>
-                  <p>{chef.designation}</p>
+                  <h3 className="text-xl font-semibold mb-2 text-white">
+                    {chef.name}
+                  </h3>
+                  <p className="text-gray-400 mb-3">{chef.designation}</p>
+                  {/* Chef rating system */}
+                  <div className="flex justify-center mb-4">
+                    {[...Array(5)].map((star, i) => (
+                      <FaStar
+                        key={i}
+                        className={`${
+                          i < chef.rating ? 'text-yellow-500' : 'text-gray-500'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <p className="text-white">
+                    {chef.rating} out of 5 stars
+                  </p>
                 </div>
               </div>
             ))}
