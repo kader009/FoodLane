@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useAuth from '../../Hooks/useAuth';
+import toast from 'react-hot-toast';
 
 const AddFood = () => {
   const { user } = useAuth();
@@ -36,12 +37,22 @@ const AddFood = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log('Response:', data);
+        if (data.acknowledged) {
+          toast.success('Food added successfully..');
+
+          setFoodName('');
+          setFoodImage('');
+          setFoodCategory('');
+          setQuantity(1);
+          setPrice('');
+          setFoodOrigin('');
+          setDescription('');
+        }
       })
       .catch((error) => {
+        toast.error('something went wrong..');
         console.error('Error:', error);
       });
-    console.log('Food Item:', AddFood);
   };
 
   return (

@@ -64,9 +64,9 @@ const OurChefs = () => {
                       />
                     ))}
                   </div>
-                  <p className="text-white">
+                  {/* <p className="text-white">
                     {chef.rating} out of 5 stars
-                  </p>
+                  </p> */}
                 </div>
               </div>
             ))}
