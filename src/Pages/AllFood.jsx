@@ -25,7 +25,7 @@ const AllFood = () => {
       });
   }, [page]);
 
-  const filteredItems = foodItems.filter((food) =>
+  const filteredItems = foodItems.filter((food) => 
     food.foodName.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
