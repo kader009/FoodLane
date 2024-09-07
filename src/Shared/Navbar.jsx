@@ -51,8 +51,24 @@ const Navbar = () => {
                 Gallery
               </Link>
             </li>
+
             {user ? (
               <>
+                <li>
+                  <Link className="focus:text-white" to="/my-food">
+                    My Food
+                  </Link>
+                </li>
+                <li>
+                  <Link className="focus:text-white" to="/add-food">
+                    Add Food
+                  </Link>
+                </li>
+                <li>
+                  <Link className="focus:text-white" to="/my-order">
+                    My Order
+                  </Link>
+                </li>
                 <li>
                   <button
                     onClick={logOut}
