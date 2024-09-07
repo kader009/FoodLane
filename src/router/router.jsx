@@ -13,6 +13,7 @@ import MyOrder from '../Pages/profile/MyOrder';
 import SingleFood from '../Pages/SingleFood';
 import EditItem from '../Pages/EditItem';
 import PurchasePage from '../Pages/PurchasePage';
+import PrivateRoute from './private/PrivateRoute';
 
 export const router = createBrowserRouter([
   {
@@ -56,7 +57,11 @@ export const router = createBrowserRouter([
       },
       {
         path: '/purchase/:id',
-        element: <PurchasePage />,
+        element: (
+          <PrivateRoute>
+            <PurchasePage />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/foodData/get/${params.id}`),
       },

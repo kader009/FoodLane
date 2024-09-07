@@ -53,18 +53,21 @@ const MyOrder = () => {
 
   return (
     <div className="mx-4 my-12">
-      <h1 className="text-2xl font-bold mb-4 text-[#F44336] text-center">
+      <h1 className="text-3xl font-bold  text-[#F44336] text-center">
         My Orders
       </h1>
+      <p className="capitalize text-lg mb-4 mt-2 text-center">
+        My order list of food items
+      </p>
 
       {loading ? (
         <LoadingSpinner />
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {foods.map((food) => (
             <div
               key={food._id}
-              className="bg-white text-black rounded-lg p-4 shadow-lg flex flex-col flex-wrap items-center"
+              className="bg-white text-black rounded-lg p-4 shadow-lg flex flex-col flex-wrap justify-center items-center"
             >
               <img
                 src={food.foodImage}
@@ -72,9 +75,9 @@ const MyOrder = () => {
                 className="w-32 h-32 object-cover rounded-full mb-4"
               />
               <h2 className="text-xl font-semibold mb-2">{food.foodName}</h2>
-              <p className="mb-2">$ {food.price}</p>
+              <p className="mb-2 text-[#F44336]">$ {food.price}</p>
               <p className="text-sm mb-2">{food.Date}</p>
-              <p className="text-sm mb-4">Owner: {food.buyerName}</p>
+              <p className="text-sm mb-4"><span className='font-bold'>Owner: </span>{food.buyerName}</p>
               <button
                 onClick={() => handleDelete(food._id)}
                 className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
