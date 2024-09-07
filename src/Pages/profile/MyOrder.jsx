@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import useAuth from '../../Hooks/useAuth';
 import LoadingSpinner from '../../Components/LoadingSpinner';
+import toast from 'react-hot-toast';
 
 const MyOrder = () => {
   const { user } = useAuth();
@@ -36,18 +37,25 @@ const MyOrder = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        if (data.deletedCount === 1) {
+          toast.success('Food deleted successfully');
+        }
+
         if (data.deletedCount > 0) {
           setFoods(foods.filter((food) => food._id !== id));
         }
       })
       .catch((error) => {
+        toast.error('something went wrong here for deleted..');
         console.log(error);
       });
   };
 
   return (
     <div className="mx-4 my-12">
-      <h1 className="text-2xl font-bold mb-4 text-white">My Orders</h1>
+      <h1 className="text-2xl font-bold mb-4 text-[#F44336] text-center">
+        My Orders
+      </h1>
 
       {loading ? (
         <LoadingSpinner />

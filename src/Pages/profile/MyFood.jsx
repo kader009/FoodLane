@@ -8,7 +8,7 @@ import LoadingSpinner from '../../Components/LoadingSpinner';
 const MyFood = () => {
   const { user } = useAuth();
   const [foods, setFoods] = useState([]);
-  const [loading, setLoading] = useState(true); // Keep loading true initially
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchFoods = async () => {
@@ -19,14 +19,14 @@ const MyFood = () => {
       } catch (error) {
         console.error('Error fetching food data:', error);
       } finally {
-        setLoading(false); // Set loading false in both success and error cases
+        setLoading(false); 
       }
     };
 
     if (user?.email) {
       fetchFoods();
     } else {
-      setLoading(false); // Stop loading if user email is unavailable
+      setLoading(false); 
     }
   }, [user?.email]);
 

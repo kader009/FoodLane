@@ -1,6 +1,6 @@
 import { useLoaderData } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
-import { useEffect } from 'react';
+import toast from 'react-hot-toast';
 
 const PurchasePage = () => {
   const { user } = useAuth();
@@ -29,7 +29,7 @@ const PurchasePage = () => {
       buyerName,
       buyerEmail,
       Date,
-      foodImage
+      foodImage,
     };
 
     fetch('http://localhost:5000/orders', {
@@ -41,9 +41,14 @@ const PurchasePage = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        if (data.acknowledged) {
+          toast.success('Food order successfully!');
+        } else {
+          toast.error('Failed to add purchase.');
+        }
       })
       .catch((error) => {
+        toast.error('An error occurred while adding the purchase.');
         console.log(error);
       });
 
@@ -85,7 +90,7 @@ const PurchasePage = () => {
         </div>
         <div className="mb-4">
           <label className="block text-white text-sm font-bold mb-2">
-          Food Image
+            Food Image
           </label>
           <input
             type="text"
