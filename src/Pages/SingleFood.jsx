@@ -23,7 +23,7 @@ const SingleFood = () => {
 
   return (
     <div>
-      <h2 className="capitalize text-center text-3xl font-bold text-[#F44336]">
+      <h2 className="capitalize text-center text-3xl font-bold text-[#F44336] mt-3">
         Single food item
       </h2>
       <p className='text-center text-xl mb-5 mt-2'>Check your food item for purchase</p>
