@@ -24,19 +24,16 @@ const EditItem = () => {
       foodOrigin,
     };
 
-    // console.log(foodValue);
-
     fetch(`http://localhost:5000/foodData/${_id}`, {
-      method: "PATCH", // <-- Move method out of headers
+      method: 'PATCH',
       headers: {
-        'Content-Type': 'application/json', // Fix content-type capitalization
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(foodValue),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        // Handle success (e.g., display a success message or redirect)
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -46,7 +43,7 @@ const EditItem = () => {
 
   return (
     <div className="container mx-auto bg-black pb-4">
-      <h1 className="text-3xl font-bold text-center my-8 text-[#F44336]">
+      <h1 className="text-3xl font-black text-center my-8 text-[#F44336]">
         Edit Food Item
       </h1>
       <form
