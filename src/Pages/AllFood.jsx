@@ -47,7 +47,7 @@ const AllFood = () => {
     <div className="bg-black">
       <div className=" bg-black text-white">
         <header className=" py-4 text-center">
-          <h1 className="text-4xl font-bold text-[#F44336]">
+          <h1 className="text-4xl font-black text-[#F44336]">
             Food Listing Page
           </h1>
           <p className="capitalize mt-3 text-lg">

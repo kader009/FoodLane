@@ -53,7 +53,7 @@ const MyOrder = () => {
 
   return (
     <div className="mx-4 my-12">
-      <h1 className="text-3xl font-bold text-[#F44336] text-center">
+      <h1 className="text-3xl font-black text-[#F44336] text-center">
         My Orders
       </h1>
       <p className="capitalize text-lg mb-4 mt-2 text-center">

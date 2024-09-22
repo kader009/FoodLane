@@ -33,7 +33,7 @@ const Gallery = () => {
 
   return (
     <div className="bg-black text-white py-8">
-      <h1 className="text-4xl font-bold text-center text-[#F44336]">
+      <h1 className="text-4xl font-black text-center text-[#F44336]">
         Food Gallery
       </h1>
       <p className='capitalize text-center text-lg my-3'>Our listed food item gallery for show foods</p>

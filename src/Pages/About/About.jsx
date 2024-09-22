@@ -10,7 +10,7 @@ const About = () => {
       </div>
 
       <div className="lg:w-1/2 text-center lg:text-left lg:pl-12">
-        <h2 className="text-4xl font-bold mb-4 text-[#F44336]">
+        <h2 className="text-4xl font-black mb-4 text-[#F44336]">
           About FoodLane
         </h2>
         <p className="text-lg mb-6">

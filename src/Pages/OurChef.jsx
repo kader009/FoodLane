@@ -29,7 +29,7 @@ const OurChefs = () => {
   return (
     <section className="py-12 bg-black px-12">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-2 text-[#F44336]">
+        <h2 className="text-4xl font-black mb-2 text-[#F44336]">
           Meet Our Chefs
         </h2>
         <p className="mb-6">

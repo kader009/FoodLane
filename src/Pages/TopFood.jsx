@@ -23,7 +23,7 @@ const TopFood = () => {
 
   return (
     <div className="bg-black text-center">
-      <h1 className="text-4xl font-bold text-[#F44336] mb-3">Top Food</h1>
+      <h1 className="text-4xl font-black text-[#F44336] mb-3">Top Food</h1>
       <p className="text-lg mb-7 text-center truncate">
         Explore our top-rated dishes, crafted with care and bursting with
         flavor. Savor <br /> a culinary journey that delights every bite.
