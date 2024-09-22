@@ -39,10 +39,7 @@ const OurChefs = () => {
         <Container>
           <div className="flex flex-wrap justify-center">
             {chefs.map((chef, index) => (
-              <div
-                key={index}
-                className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8"
-              >
+              <div key={index} className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
                 <div className="bg-gray-950 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   <img
                     src={chef.image}
@@ -64,9 +61,6 @@ const OurChefs = () => {
                       />
                     ))}
                   </div>
-                  {/* <p className="text-white">
-                    {chef.rating} out of 5 stars
-                  </p> */}
                 </div>
               </div>
             ))}

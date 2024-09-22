@@ -137,7 +137,7 @@ const Navbar = () => {
               >
                 <div className="w-11 rounded-full">
                   <img
-                    alt="User Avatar"
+                    alt="User Profile"
                     src={
                       user?.photoURL ||
                       'https://templates.joomla-monster.com/joomla30/jm-news-portal/components/com_djclassifieds/assets/images/default_profile.png'

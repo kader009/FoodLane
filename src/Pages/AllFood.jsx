@@ -8,24 +8,26 @@ const AllFood = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true); 
+    setLoading(true);
     axios
-      .get(`http://localhost:5000/foodData?page=${page}&limit=6`)
+      .get(
+        `https://foodlane-server-psi.vercel.app/foodData?page=${page}&limit=6`
+      )
       .then((response) => {
         setFoodItems(response.data.foods);
         setTotalPages(response.data.totalPages);
-        setLoading(false); 
+        setLoading(false);
       })
       .catch((error) => {
         console.error('Error fetching food items:', error);
-        setLoading(false); 
+        setLoading(false);
       });
   }, [page]);
 
-  const filteredItems = foodItems.filter((food) => 
+  const filteredItems = foodItems.filter((food) =>
     food.foodName.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -48,7 +50,9 @@ const AllFood = () => {
           <h1 className="text-4xl font-bold text-[#F44336]">
             Food Listing Page
           </h1>
-          <p className='capitalize mt-3 text-lg' >We provide the best food items for our customers</p>
+          <p className="capitalize mt-3 text-lg">
+            We provide the best food items for our customers
+          </p>
         </header>
 
         <section className="container mx-auto py-2">

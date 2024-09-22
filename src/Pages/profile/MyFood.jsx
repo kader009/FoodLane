@@ -48,7 +48,7 @@ const MyFood = () => {
               No Data Found
             </p>
           ) : (
-            <div className="flex justify-center items-center flex-wrap gap-4 mx-auto">
+            <div className="flex justify-center items-center flex-wrap gap-4">
               {foods.map((food) => (
                 <div
                   key={food._id}
