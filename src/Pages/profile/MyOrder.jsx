@@ -64,13 +64,11 @@ const MyOrder = () => {
         <LoadingSpinner />
       ) : (
         <>
-          {foods.length === 0 ? (
-            <p className="text-center text-2xl mt-6">
-              No Data Found
-            </p>
+          {foods?.length === 0 ? (
+            <p className="text-center text-2xl mt-6">No Data Found</p>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {foods.map((food) => (
+              {foods?.map((food) => (
                 <div
                   key={food._id}
                   className="bg-white text-black rounded-lg p-4 shadow-lg flex flex-col flex-wrap justify-center items-center"
@@ -83,7 +81,7 @@ const MyOrder = () => {
                   <h2 className="text-xl font-semibold mb-2">
                     {food.foodName}
                   </h2>
-                  <p className="mb-2 text-[#F44336]">$ {food.price}</p>
+                  <p className="mb-2 text-[#F44336] font-bold">${food.price}</p>
                   <p className="text-sm mb-2">{food.Date}</p>
                   <p className="text-sm mb-4">
                     <span className="font-bold">Owner: </span>
