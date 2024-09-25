@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const AllFood = () => {
   const [foodItems, setFoodItems] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(''); 
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(false);

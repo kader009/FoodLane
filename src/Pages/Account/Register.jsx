@@ -3,20 +3,37 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import toast from 'react-hot-toast';
 import SocialLogin from '../../Components/SocialLogin';
+import axios from 'axios';
 
 const Register = () => {
-  const { createUser } = useAuth();
+  const { createUser, updateUserProfile } = useAuth();
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
     const { name, email, password, photo } = data;
-    createUser(email, password);
+    createUser(email, password).then(() => {
+      updateUserProfile(name, photo).then(() => {
+        const userInfo = {
+          name: name,
+          photo: photo,
+        };
+
+        axios.post(`http://localhost:5000/user`, userInfo).then((res) => {
+          console.log(res.data);
+          if (res.data.insertedId) {
+            toast.success('user added successfully');
+            reset()
+          }
+        });
+      });
+    });
 
     // fetch('http://localhost:5000/user', {
     //   method: 'POST',
