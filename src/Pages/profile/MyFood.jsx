@@ -13,7 +13,7 @@ const MyFood = () => {
   useEffect(() => {
     const fetchFoods = async () => {
       try {
-        const url = `http://localhost:5000/foodData?email=${user?.email}`;
+        const url = `https://foodlane-server-api.onrender.com/foodData?email=${user?.email}`;
         const response = await axios.get(url);
         setFoods(response.data.foods || []);
       } catch (error) {

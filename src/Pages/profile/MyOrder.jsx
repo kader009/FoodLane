@@ -13,7 +13,7 @@ const MyOrder = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/orders?email=${user?.email}`, {
+        const res = await fetch(`https://foodlane-server-api.onrender.com/orders?email=${user?.email}`, {
           credentials: 'include',
         });
   
@@ -40,7 +40,7 @@ const MyOrder = () => {
   
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/orders/${id}`, {
+    fetch(`https://foodlane-server-api.onrender.com/orders/${id}`, {
       method: 'DELETE',
     })
       .then((res) => res.json())

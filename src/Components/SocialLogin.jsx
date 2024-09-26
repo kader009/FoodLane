@@ -12,7 +12,7 @@ const SocialLogin = () => {
       };
 
       axios
-        .post(`http://localhost:5000/user`, userinfo, { withCredentials: true })
+        .post(`https://foodlane-server-api.onrender.com/user`, userinfo, { withCredentials: true })
         .then((res) => {
           console.log(res.data);
         });

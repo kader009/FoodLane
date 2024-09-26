@@ -28,7 +28,7 @@ const AddFood = () => {
       },
     };
 
-    fetch('http://localhost:5000/foodData', {
+    fetch('https://foodlane-server-api.onrender.com/foodData', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

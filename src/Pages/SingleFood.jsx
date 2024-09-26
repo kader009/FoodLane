@@ -10,7 +10,7 @@ const SingleFood = () => {
     const fetchFood = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/foodData/${id}`
+          `https://foodlane-server-api.onrender.com/foodData/${id}`
         );
         setFood(response.data);
       } catch (error) {

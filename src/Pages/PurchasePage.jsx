@@ -32,7 +32,7 @@ const PurchasePage = () => {
       foodImage,
     };
 
-    fetch('http://localhost:5000/orders', {
+    fetch('https://foodlane-server-api.onrender.com/orders', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

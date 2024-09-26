@@ -24,7 +24,7 @@ const EditItem = () => {
       foodOrigin,
     };
 
-    fetch(`http://localhost:5000/foodData/${_id}`, {
+    fetch(`https://foodlane-server-api.onrender.com/foodData/${_id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -37,7 +37,6 @@ const EditItem = () => {
       })
       .catch((error) => {
         console.error('Error:', error);
-        // Handle errors
       });
   };
 

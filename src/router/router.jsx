@@ -41,7 +41,7 @@ export const router = createBrowserRouter([
         path: 'my-food/editItem/:id',
         element: <EditItem />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/foodData/get/${params.id}`),
+          fetch(`https://foodlane-server-api.onrender.com/foodData/get/${params.id}`),
       },
       {
         path: '/add-food',
@@ -63,7 +63,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/foodData/get/${params.id}`),
+          fetch(`https://foodlane-server-api.onrender.com/foodData/get/${params.id}`),
       },
       {
         path: '/gallery',

@@ -25,32 +25,17 @@ const Register = () => {
           photo: photo,
         };
 
-        axios.post(`http://localhost:5000/user`, userInfo).then((res) => {
-          console.log(res.data);
-          if (res.data.insertedId) {
-            toast.success('user added successfully');
-            reset()
-          }
-        });
+        axios
+          .post(`https://foodlane-server-api.onrender.com/user`, userInfo)
+          .then((res) => {
+            console.log(res.data);
+            if (res.data.insertedId) {
+              toast.success('user added successfully');
+              reset();
+            }
+          });
       });
     });
-
-    // fetch('http://localhost:5000/user', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({ name, email, password, photo }),
-    // })
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     console.log('Success:', data);
-    //     toast.success('User registered successfully!');
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error:', error);
-    //     toast.error(`Registration failed: ${error.message}`);
-    //   });
   };
 
   return (
