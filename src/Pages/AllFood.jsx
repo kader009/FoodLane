@@ -14,7 +14,8 @@ const AllFood = () => {
     setLoading(true);
     axios
       .get(
-        `https://foodlane-server-api.onrender.com/foodData?page=${page}&limit=6` 
+        `https://foodlane-server-api.onrender.com/foodData?page=${page}&limit=6`,
+        { withCredentials: true }
       )
       .then((response) => {
         setFoodItems(response.data.foods);
