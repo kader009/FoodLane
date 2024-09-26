@@ -52,7 +52,7 @@ const Login = () => {
         <div className="text-center text-white mb-4">
           <p>Demo Credentials:</p>
           <p>
-            Email: <span className="text-[#F44336]">abul@gmail.com</span>
+            Email: <span className="text-[#F44336]">adil@gmail.com</span>
           </p>
           <p>
             Password: <span className="text-[#F44336]">78757278</span>

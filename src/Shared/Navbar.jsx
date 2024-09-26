@@ -1,8 +1,15 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
+  const navigate = useNavigate()
+
+  const handlelogOut = () =>{
+    logOut().then(() =>{
+      navigate('/login')
+    })
+  }
 
   return (
     <div className="navbar bg-[rgba(8,8,8,7)] sticky top-0 z-10">
@@ -71,7 +78,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <button
-                    onClick={logOut}
+                    onClick={handlelogOut}
                     className="bg-[#F44336] text-white flex justify-center items-center hover:bg-[#F44336] focus:text-white active:bg-[#F44336]"
                   >
                     Logout
@@ -111,7 +118,7 @@ const Navbar = () => {
               <>
                 <li>
                   <button
-                    onClick={() => logOut()}
+                    onClick={() => handlelogOut()}
                     className="bg-[#F44336] text-white hover:bg-[#F44336] focus:bg-[#F44336] focus:text-white"
                   >
                     Logout
@@ -166,7 +173,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <button
-                    onClick={logOut}
+                    onClick={handlelogOut}
                     className="bg-[#F44336] text-white flex justify-center items-center hover:bg-[#F44336] focus:bg-[#F44336] focus:text-white"
                   >
                     Logout
