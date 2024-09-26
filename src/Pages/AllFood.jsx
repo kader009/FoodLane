@@ -73,7 +73,7 @@ const AllFood = () => {
             </div>
           ) : (
             <Container>
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-center items-center">
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-center items-center justify-items-center">
                 {filteredItems.map((food) => (
                   <div
                     key={food._id}
