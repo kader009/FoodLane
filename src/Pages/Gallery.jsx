@@ -25,7 +25,7 @@ const Gallery = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/foodData').then((res) => {
+    axios.get('https://foodlane-server-api.onrender.com/foodData').then((res) => {
       seTfoods(res.data.foods || []);
       setLoading(false);
     });
