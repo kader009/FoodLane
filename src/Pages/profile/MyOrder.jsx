@@ -2,34 +2,42 @@ import { useState, useEffect } from 'react';
 import useAuth from '../../Hooks/useAuth';
 import LoadingSpinner from '../../Components/LoadingSpinner';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const MyOrder = () => {
-  const { user } = useAuth();
+  const { user, logOut } = useAuth();
+  const navigate = useNavigate()
   const [foods, setFoods] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchOrders = () => {
-      fetch(`http://localhost:5000/orders?email=${user?.email}`, {
-        credentials: 'include',
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          setFoods(data);
-          setLoading(false);
-        })
-        .catch((error) => {
-          console.log(error);
-          setLoading(false);
+    const fetchOrders = async () => {
+      try {
+        const res = await fetch(`http://localhost:5000/orders?email=${user?.email}`, {
+          credentials: 'include',
         });
+  
+        if (!res.ok) throw new Error('Unauthorized');
+  
+        const data = await res.json();
+        setFoods(data);
+      } catch (error) {
+        console.log(error);
+        logOut().then(() => {
+          navigate('/login');
+        });
+      } finally {
+        setLoading(false);
+      }
     };
-
+  
     if (user?.email) {
       fetchOrders();
     } else {
       setLoading(false);
     }
   }, [user?.email]);
+  
 
   const handleDelete = (id) => {
     fetch(`http://localhost:5000/orders/${id}`, {
