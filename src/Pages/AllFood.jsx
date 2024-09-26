@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const AllFood = () => {
   const [foodItems, setFoodItems] = useState([]);
-  const [searchQuery, setSearchQuery] = useState(''); 
+  const [searchQuery, setSearchQuery] = useState('');
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(false);
@@ -14,7 +14,7 @@ const AllFood = () => {
     setLoading(true);
     axios
       .get(
-        `https://foodlane-server-api.onrender.com/foodData?page=${page}&limit=6`
+        `https://foodlane-server-lilac.vercel.app/foodData?page=${page}&limit=6` 
       )
       .then((response) => {
         setFoodItems(response.data.foods);
