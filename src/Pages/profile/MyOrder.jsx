@@ -6,19 +6,22 @@ import { useNavigate } from 'react-router-dom';
 
 const MyOrder = () => {
   const { user, logOut } = useAuth();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [foods, setFoods] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await fetch(`https://foodlane-server-api.onrender.com/orders?email=${user?.email}`, {
-          credentials: 'include',
-        });
-  
+        const res = await fetch(
+          `https://foodlane-server-api.onrender.com/orders?email=${user?.email}`,
+          {
+            credentials: 'include',
+          }
+        );
+
         if (!res.ok) throw new Error('Unauthorized');
-  
+
         const data = await res.json();
         setFoods(data);
       } catch (error) {
@@ -30,14 +33,13 @@ const MyOrder = () => {
         setLoading(false);
       }
     };
-  
+
     if (user?.email) {
       fetchOrders();
     } else {
       setLoading(false);
     }
   }, [user?.email]);
-  
 
   const handleDelete = (id) => {
     fetch(`https://foodlane-server-api.onrender.com/orders/${id}`, {
