@@ -1,17 +1,32 @@
 import { useLoaderData } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 import toast from 'react-hot-toast';
+import { useEffect, useState } from 'react';
 
 const PurchasePage = () => {
   const { user } = useAuth();
   const { foodName, price, quantity, foodImage } = useLoaderData();
+  const [userOrders, setUserOrders] = useState([]);
 
   const currentDate = new Date();
   const day = String(currentDate.getDate()).padStart(2, '0');
   const month = String(currentDate.getMonth() + 1).padStart(2, '0');
   const year = currentDate.getFullYear();
-
   const formattedDate = `${day}-${month}-${year}`;
+
+  // Fetch the user's existing orders
+  useEffect(() => {
+    fetch(
+      `https://foodlane-server-api.onrender.com/orders?email=${user?.email}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setUserOrders(data); // Save the user's existing orders in state
+      })
+      .catch((error) => {
+        console.log('Error fetching user orders: ', error);
+      });
+  }, [user?.email]);
 
   const handlePurchase = (e) => {
     e.preventDefault();
@@ -32,6 +47,17 @@ const PurchasePage = () => {
       foodImage,
     };
 
+    // Check if the same food item is already in the user's order list
+    const isAlreadyOrdered = userOrders.some(
+      (order) => order.foodName === foodName
+    );
+
+    if (isAlreadyOrdered) {
+      toast.error('You have already ordered this food item.');
+      return;
+    }
+
+    // Proceed with placing the order if not a duplicate
     fetch('https://foodlane-server-api.onrender.com/orders', {
       method: 'POST',
       headers: {
@@ -42,7 +68,7 @@ const PurchasePage = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
-          toast.success('Food order successfully!');
+          toast.success('Food ordered successfully!');
         } else {
           toast.error('Failed to add purchase.');
         }
@@ -64,6 +90,7 @@ const PurchasePage = () => {
         onSubmit={handlePurchase}
         className="max-w-lg mx-auto bg-gray-950 p-5 rounded"
       >
+        {/* Form Fields */}
         <div className="mb-4">
           <label className="block text-white text-sm font-bold mb-2">
             Food Name
