@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import LoadingSpinner from '../Components/LoadingSpinner';
+import { Helmet } from 'react-helmet-async';
 
 const FoodCard = ({ food }) => {
   return (
@@ -25,29 +26,39 @@ const Gallery = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('https://foodlane-server-api.onrender.com/foodData').then((res) => {
-      seTfoods(res.data.foods || []);
-      setLoading(false);
-    });
+    axios
+      .get('https://foodlane-server-api.onrender.com/foodData')
+      .then((res) => {
+        seTfoods(res.data.foods || []);
+        setLoading(false);
+      });
   }, []);
 
   return (
-    <div className="bg-black text-white py-8">
-      <h1 className="text-4xl font-black text-center text-[#F44336]">
-        Food Gallery
-      </h1>
-      <p className='capitalize text-center text-lg my-3'>Our listed food item gallery for show foods</p>
-      {loading ? (
-        <div className="text-center">
-          <LoadingSpinner />
-        </div>
-      ) : (
-        <div className="flex flex-wrap justify-center">
-          {foods.map((food) => (
-            <FoodCard key={food._id} food={food} />
-          ))}
-        </div>
-      )}
+    <div>
+      <Helmet>
+        <title>FoodLane | Gallery</title>
+      </Helmet>
+
+      <div className="bg-black text-white py-8">
+        <h1 className="text-4xl font-black text-center text-[#F44336]">
+          Food Gallery
+        </h1>
+        <p className="capitalize text-center text-lg my-3">
+          Our listed food item gallery for show foods
+        </p>
+        {loading ? (
+          <div className="text-center">
+            <LoadingSpinner />
+          </div>
+        ) : (
+          <div className="flex flex-wrap justify-center">
+            {foods.map((food) => (
+              <FoodCard key={food._id} food={food} />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

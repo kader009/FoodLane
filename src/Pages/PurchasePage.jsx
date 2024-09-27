@@ -2,6 +2,7 @@ import { useLoaderData } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 import toast from 'react-hot-toast';
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const PurchasePage = () => {
   const { user } = useAuth();
@@ -82,125 +83,131 @@ const PurchasePage = () => {
   };
 
   return (
-    <div className=" mx-auto bg-black pb-4">
-      <h1 className="text-3xl font-bold text-center my-8 text-[#F44336]">
-        Purchase Food Item
-      </h1>
-      <form
-        onSubmit={handlePurchase}
-        className="max-w-lg mx-auto bg-gray-950 p-5 rounded"
-      >
-        {/* Form Fields */}
-        <div className="mb-4">
-          <label className="block text-white text-sm font-bold mb-2">
-            Food Name
-          </label>
-          <input
-            type="text"
-            name="foodName"
-            defaultValue={foodName}
-            readOnly
-            className="w-full px-3 py-2 border rounded-md bg-black"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-white text-sm font-bold mb-2">
-            Price
-          </label>
-          <input
-            type="text"
-            name="price"
-            defaultValue={price}
-            readOnly
-            className="w-full px-3 py-2 border rounded-md bg-black"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-white text-sm font-bold mb-2">
-            Food Image
-          </label>
-          <input
-            type="text"
-            name="foodImage"
-            defaultValue={foodImage}
-            readOnly
-            className="w-full px-3 py-2 border rounded-md bg-black"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-white text-sm font-bold mb-2">
-            Quantity
-          </label>
-          <input
-            type="number"
-            name="quantity"
-            defaultValue={quantity}
-            className="w-full px-3 py-2 border rounded-md bg-black"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-white text-sm font-bold mb-2">
-            Buyer Name
-          </label>
-          <input
-            type="text"
-            name="buyerName"
-            defaultValue={user?.displayName}
-            readOnly
-            className="w-full px-3 py-2 border rounded-md bg-black"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-white text-sm font-bold mb-2">
-            Buyer Email
-          </label>
-          <input
-            type="text"
-            name="buyerEmail"
-            defaultValue={user?.email}
-            readOnly
-            className="w-full px-3 py-2 border rounded-md bg-black"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-white text-sm font-bold mb-2">
-            Buying Date
-          </label>
-          <input
-            type="text"
-            name="Date"
-            defaultValue={formattedDate}
-            readOnly
-            className="w-full px-3 py-2 border rounded-md bg-black"
-          />
-        </div>
-        <button
-          type="submit"
-          className="bg-[#F44336] text-white px-4 py-2 rounded hover:bg-[#D32F2F] transition-colors"
+    <div>
+      <Helmet>
+        <title>FoodLane | Purchase</title>
+      </Helmet>
+
+      <div className=" mx-auto bg-black pb-4">
+        <h1 className="text-3xl font-bold text-center my-8 text-[#F44336]">
+          Purchase Food Item
+        </h1>
+        <form
+          onSubmit={handlePurchase}
+          className="max-w-lg mx-auto bg-gray-950 p-5 rounded"
         >
-          <div className="flex">
-            <div>Order Now</div>
-            <div>
-              <div className="ms-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-                  />
-                </svg>
+          {/* Form Fields */}
+          <div className="mb-4">
+            <label className="block text-white text-sm font-bold mb-2">
+              Food Name
+            </label>
+            <input
+              type="text"
+              name="foodName"
+              defaultValue={foodName}
+              readOnly
+              className="w-full px-3 py-2 border rounded-md bg-black"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-white text-sm font-bold mb-2">
+              Price
+            </label>
+            <input
+              type="text"
+              name="price"
+              defaultValue={price}
+              readOnly
+              className="w-full px-3 py-2 border rounded-md bg-black"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-white text-sm font-bold mb-2">
+              Food Image
+            </label>
+            <input
+              type="text"
+              name="foodImage"
+              defaultValue={foodImage}
+              readOnly
+              className="w-full px-3 py-2 border rounded-md bg-black"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-white text-sm font-bold mb-2">
+              Quantity
+            </label>
+            <input
+              type="number"
+              name="quantity"
+              defaultValue={quantity}
+              className="w-full px-3 py-2 border rounded-md bg-black"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-white text-sm font-bold mb-2">
+              Buyer Name
+            </label>
+            <input
+              type="text"
+              name="buyerName"
+              defaultValue={user?.displayName}
+              readOnly
+              className="w-full px-3 py-2 border rounded-md bg-black"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-white text-sm font-bold mb-2">
+              Buyer Email
+            </label>
+            <input
+              type="text"
+              name="buyerEmail"
+              defaultValue={user?.email}
+              readOnly
+              className="w-full px-3 py-2 border rounded-md bg-black"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-white text-sm font-bold mb-2">
+              Buying Date
+            </label>
+            <input
+              type="text"
+              name="Date"
+              defaultValue={formattedDate}
+              readOnly
+              className="w-full px-3 py-2 border rounded-md bg-black"
+            />
+          </div>
+          <button
+            type="submit"
+            className="bg-[#F44336] text-white px-4 py-2 rounded hover:bg-[#D32F2F] transition-colors"
+          >
+            <div className="flex">
+              <div>Order Now</div>
+              <div>
+                <div className="ms-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
-        </button>
-      </form>
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
