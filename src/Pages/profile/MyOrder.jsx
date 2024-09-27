@@ -3,6 +3,7 @@ import useAuth from '../../Hooks/useAuth';
 import LoadingSpinner from '../../Components/LoadingSpinner';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import Container from '../../Components/Container';
 
 const MyOrder = () => {
   const { user, logOut } = useAuth();
@@ -64,7 +65,7 @@ const MyOrder = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="flex-grow">
-        <div className="max-w-screen-lg mx-auto py-8">
+        <Container>
           <h1 className="text-3xl font-black text-[#F44336] text-center">
             My Orders
           </h1>
@@ -79,7 +80,7 @@ const MyOrder = () => {
               {foods?.length === 0 ? (
                 <p className="text-center text-2xl mt-6">No Data Found</p>
               ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-2 lg:px-0">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-2 lg:px-0 mb-5">
                   {foods?.map((food) => (
                     <div
                       key={food._id}
@@ -131,7 +132,7 @@ const MyOrder = () => {
               )}
             </>
           )}
-        </div>
+        </Container>
       </div>
     </div>
   );
