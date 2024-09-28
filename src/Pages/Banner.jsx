@@ -6,7 +6,8 @@ const Banner = () => {
       className="hero min-h-screen"
       style={{
         backgroundImage:
-          'url(https://images.unsplash.com/photo-1541557435984-1c79685a082b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
+          'url(https://images.unsplash.com/photo-1512485800893-b08ec1ea59b1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
+          backgroundPosition:'center top',
       }}
     >
       <div className="hero-overlay bg-opacity-80 bg-black"></div>
@@ -20,7 +21,7 @@ const Banner = () => {
           </p>
 
           <button className="bg-[#F44336] p-2 rounded">
-            <Link to={'all-food'}>View All Food</Link>
+            <Link to={'all-foods'}>View All Food</Link>
           </button>
         </div>
       </div>

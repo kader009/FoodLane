@@ -109,7 +109,7 @@ const MyOrder = () => {
                             ${food.price}
                           </p>
                           <p className="text-sm text-gray-700 mb-4">
-                            <span className="font-bold">Ordered on:</span>{' '}
+                            <span className="font-bold">Ordered on: </span>
                             {food.Date}
                           </p>
                           <p className="text-sm text-gray-700 mb-6">
