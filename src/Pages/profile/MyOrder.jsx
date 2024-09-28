@@ -108,8 +108,9 @@ const MyOrder = () => {
                           <p className="text-lg font-semibold text-[#F44336] mb-2">
                             ${food.price}
                           </p>
-                          <p className="text-sm text-gray-500 mb-4">
-                            Ordered on: {food.Date}
+                          <p className="text-sm text-gray-700 mb-4">
+                            <span className="font-bold">Ordered on:</span>{' '}
+                            {food.Date}
                           </p>
                           <p className="text-sm text-gray-700 mb-6">
                             <span className="font-bold">Owner: </span>
