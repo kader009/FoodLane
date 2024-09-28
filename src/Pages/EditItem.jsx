@@ -1,9 +1,11 @@
 import { Helmet } from 'react-helmet-async';
-import { useLoaderData } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const EditItem = () => {
   const { foodName, _id, price, description, foodImage, quantity, foodOrigin } =
     useLoaderData();
+  const navigate = useNavigate();
 
   const handleUpdate = (e) => {
     e.preventDefault();
@@ -35,6 +37,10 @@ const EditItem = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if (data.modifiedCount === 1) {
+          toast.success('food items update successfully');
+          navigate('/my-food')
+        }
       })
       .catch((error) => {
         console.error('Error:', error);
