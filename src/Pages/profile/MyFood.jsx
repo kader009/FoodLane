@@ -52,12 +52,11 @@ const MyFood = () => {
         {foods.length === 0 ? (
           <p className="text-center text-white text-2xl mt-6">No Data Found</p>
         ) : (
-          // Responsive grid layout for different screen sizes
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
             {foods.map((food) => (
               <div
                 key={food._id}
-                // Responsive width for cards
                 className="w-full sm:w-auto mx-auto bg-white rounded-xl shadow-md overflow-hidden transform transition-transform hover:scale-105 duration-300 mb-3"
               >
                 <img

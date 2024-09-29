@@ -62,7 +62,7 @@ const AllFood = () => {
           </header>
 
           <section className="container mx-auto py-2">
-            <div className="mb-6 text-center">
+            <div className="mb-6 text-center mx-2">
               <input
                 type="text"
                 placeholder="Search for food..."
