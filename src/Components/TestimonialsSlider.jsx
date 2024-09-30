@@ -9,24 +9,34 @@ const testimonials = [
   {
     name: 'Michael Anderson',
     image:
-      'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      'https://randomuser.me/api/portraits/men/32.jpg',
     feedback:
       'FoodLane is fantastic! The food quality is consistent, and their service is impeccable. Highly recommended!',
   },
   {
     name: 'Sophia Williams',
-    image: 'https://images.pexels.com/photos/789305/pexels-photo-789305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image:
+      'https://randomuser.me/api/portraits/women/65.jpg',
     feedback:
       'A remarkable dining experience! Fresh ingredients, amazing flavors, and excellent service every time!',
   },
   {
     name: 'David Johnson',
     image:
-      'https://images.pexels.com/photos/428333/pexels-photo-428333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      'https://randomuser.me/api/portraits/men/85.jpg',
     feedback:
       'The dishes at FoodLane are crafted with such care! A perfect spot for a great meal with family and friends.',
   },
+  {
+    name: 'Emma Thompson',
+    image:
+      'https://randomuser.me/api/portraits/women/45.jpg',
+    feedback:
+      'FoodLane offers an amazing dining experience with a cozy ambiance. Highly recommend the chef\'s special!',
+  },
 ];
+
+
 
 const TestimonialsSlider = () => {
   return (
