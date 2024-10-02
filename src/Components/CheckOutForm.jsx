@@ -38,7 +38,7 @@ const CheckOutForm = () => {
   useEffect(() => {
     if (!isNaN(totalCost) && totalCost > 0) {
       axios
-        .post('http://localhost:5000/create-payment-intent', {
+        .post('https://foodlane-server-api.onrender.com/create-payment-intent', {
           price: totalCost,
         })
         .then((res) => {
@@ -108,7 +108,7 @@ const CheckOutForm = () => {
         };
 
         const response = await axios.post(
-          `http://localhost:5000/payment`,
+          `https://foodlane-server-api.onrender.com/payment`,
           payment
         );
         console.log(response.data);
