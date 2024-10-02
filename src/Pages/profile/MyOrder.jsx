@@ -82,7 +82,7 @@ const MyOrder = () => {
             <h1 className="text-4xl font-extrabold text-[#F44336] text-center mt-8">
               My Orders
             </h1>
-            <p className="text-lg mb-8 mt-3 text-center">
+            <p className="text-lg mb-8 mt-2 text-center">
               Your list of delicious food orders
             </p>
 

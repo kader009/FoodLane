@@ -66,6 +66,7 @@ const CheckOutForm = () => {
       return;
     }
 
+    // add card methods here
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: 'card',
       card,
