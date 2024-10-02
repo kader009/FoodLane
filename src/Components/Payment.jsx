@@ -12,7 +12,7 @@ const Payment = () => {
         <title>Foodlane | Payment</title>
       </Helmet>
 
-      <div className="min-h-screen ">
+      <div className="min-h-screen flex items-center justify-center p-4">
         <Elements stripe={stripePromise}>
           <CheckOutForm />
         </Elements>
