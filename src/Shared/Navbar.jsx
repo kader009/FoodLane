@@ -77,6 +77,11 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link className="focus:text-white" to="/payment-history">
+                    Payment History
+                  </Link>
+                </li>
+                <li>
                   <button
                     onClick={handlelogOut}
                     className="bg-[#F44336] text-white flex justify-center items-center hover:bg-[#F44336] focus:text-white active:bg-[#F44336]"
@@ -169,6 +174,11 @@ const Navbar = () => {
                 <li>
                   <Link className="focus:text-white" to="/my-order">
                     My Order
+                  </Link>
+                </li>
+                <li>
+                  <Link className="focus:text-white" to="/payment-history">
+                    Payment History
                   </Link>
                 </li>
                 <li>

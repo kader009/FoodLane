@@ -37,11 +37,11 @@ const MyFood = () => {
     <title>FoodLane | MyFood</title>
   </Helmet>
 
-  <div className="bg-black">
+  <div className="bg-black min-h-screen">
     <div className="text-center my-6">
       <h1 className="text-3xl font-black text-[#F44336]">My Added Food</h1>
       <p className="capitalize text-lg mt-2">
-        Here is the list of food that I want to eat
+        Here is the list of food that I added
       </p>
     </div>
 

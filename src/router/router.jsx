@@ -14,6 +14,8 @@ import SingleFood from '../Pages/SingleFood';
 import EditItem from '../Pages/EditItem';
 import PurchasePage from '../Pages/PurchasePage';
 import PrivateRoute from './private/PrivateRoute';
+import Payment from '../Components/Payment';
+import PaymentHistory from '../Components/PaymentHistory';
 
 export const router = createBrowserRouter([
   {
@@ -76,6 +78,14 @@ export const router = createBrowserRouter([
       {
         path: 'register',
         element: <Register />,
+      },
+      {
+        path: 'payment',
+        element: <Payment />,
+      },
+      {
+        path: 'payment-history',
+        element: <PaymentHistory />,
       },
     ],
   },
