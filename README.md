@@ -48,7 +48,7 @@ Before you begin, ensure you have met the following requirements:
    ```bash
    git clone https://github.com/kader009/FoodLane.git
 
-2. **Install all of the things**:
+2. **Install all of the dependencies**:
 
    ```bash
    npm install or yarn add or pnpm install
