@@ -12,7 +12,7 @@ const PaymentHistory = () => {
   useEffect(() => {
     if (user?.email) {
       axios
-        .get(`http://localhost:5000/payment/${user.email}`)
+        .get(`https://foodlane-server-api.onrender.com/payment/${user.email}`)
         .then((res) => {
           setPayments(res.data);
           setLoading(false);
