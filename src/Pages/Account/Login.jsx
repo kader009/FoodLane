@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import SocialLogin from '../../Components/SocialLogin';
 import { Helmet } from 'react-helmet-async';
+import toast from 'react-hot-toast';
 
 const Login = () => {
   const { user, signIn } = useAuth();
@@ -30,6 +31,7 @@ const Login = () => {
       const loggedUser = res.user;
       console.log(loggedUser);
       const user = { email };
+      toast.success('User log in successfully')
 
       axios
         .post('https://foodlane-server-api.onrender.com/jwt', user, {
