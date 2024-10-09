@@ -41,7 +41,7 @@ const MyOrder = () => {
     } else {
       setLoading(false);
     }
-  }, [user?.email]);
+  }, [logOut, navigate, user?.email]);
 
   const handleDelete = (id) => {
     fetch(`https://foodlane-server-api.onrender.com/orders/${id}`, {
