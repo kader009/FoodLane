@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const ContactUs = () => {
   const [form, setForm] = useState({
@@ -30,8 +30,8 @@ const ContactUs = () => {
         <div className="space-y-8">
           <h1 className="text-4xl font-bold">Contact Us</h1>
           <p>
-            We're here to help! If you have any questions, comments, or
-            concerns, please don't hesitate to reach out to us. Your feedback is
+            We are here to help! If you have any questions, comments, or
+            concerns, please do not hesitate to reach out to us. Your feedback is
             important to us.
           </p>
           <div>
