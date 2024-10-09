@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import LoadingSpinner from '../Components/LoadingSpinner';
 import { Helmet } from 'react-helmet-async';
+import PropTypes from 'prop-types';
 
 const FoodCard = ({ food }) => {
   return (
@@ -61,6 +62,14 @@ const Gallery = () => {
       </div>
     </div>
   );
+};
+
+FoodCard.propTypes = {
+  food: PropTypes.shape({
+    foodImage: PropTypes.string.isRequired,
+    foodName: PropTypes.string.isRequired,
+    description: PropTypes.string,
+  }).isRequired,
 };
 
 export default Gallery;
