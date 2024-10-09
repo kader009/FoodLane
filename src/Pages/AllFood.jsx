@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Container from '../Components/Container';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -76,6 +76,12 @@ const AllFood = () => {
             {loading ? (
               <div className="flex justify-center items-center">
                 <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full border-t-[#F44336]"></div>
+              </div>
+            ) : filteredItems.length === 0 ? (
+              <div className="flex justify-center items-center">
+                <p className="text-white text-lg">
+                  No food items found for {searchQuery}
+                </p>
               </div>
             ) : (
               <Container>
