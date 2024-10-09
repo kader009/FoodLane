@@ -64,7 +64,7 @@ const AddFood = () => {
 
       <div className="flex flex-col items-center justify-center min-h-screen bg-black p-4 md:p-8">
         <div className="w-full max-w-2xl bg-gray-950 text-white shadow-md rounded-lg p-6 space-y-6">
-          <h1 className="text-2xl font-black text-center text-[#F44336]">
+          <h1 className="text-3xl font-black text-center text-[#F44336]">
             Add New Food Item
           </h1>
 
