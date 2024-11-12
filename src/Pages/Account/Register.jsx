@@ -17,27 +17,24 @@ const Register = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     const { name, email, password, photo } = data;
+  
     createUser(email, password).then(() => {
       updateUserProfile(name, photo).then(() => {
-        const userInfo = {
-          name: name,
-          photo: photo,
-        };
-
-        axios
-          .post(`https://foodlane-server-api.onrender.com/user`, userInfo)
-          .then((res) => {
-            console.log(res.data);
-            if (res.data.insertedId) {
-              toast.success('user added successfully');
-              reset();
-            }
-          });
+        const userInfo = { name, email, photo };
+  
+        axios.post(`https://foodlane-server-api.onrender.com/user`, userInfo).then((res) => {
+          if (res.data.status === 'exists') {
+            toast.error(res.data.message);  // User already exists
+          } else if (res.data.insertedId) {
+            toast.success('User added successfully');  // New user added
+          }
+          reset(); // Clear the form after checking response
+        });
       });
     });
   };
+  
 
   return (
     <div>
