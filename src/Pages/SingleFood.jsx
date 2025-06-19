@@ -29,14 +29,14 @@ const SingleFood = () => {
       </Helmet>
 
       <div className="container mx-auto px-4">
-        <h2 className="capitalize text-center text-4xl font-extrabold text-[#F44336] mt-6">
+        <h1 className="capitalize text-center text-4xl font-extrabold text-[#F44336] mt-6">
           {food.foodName}
-        </h2>
+        </h1>
         <p className="text-center text-xl mb-6 mt-3">
           A delicious treat awaits. Order now!
         </p>
 
-        <div className="w-full max-w-lg mx-auto bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300 mb-10">
+        <div className="w-full max-w-lg mx-auto bg-white rounded-lg shadow-lg overflow-hidden hover:scale-95 transform transition duration-300 mb-10">
           <img
             src={food.foodImage}
             alt={food.foodName}
@@ -44,9 +44,9 @@ const SingleFood = () => {
             loading="lazy"
           />
           <div className="p-6">
-            <h3 className="text-2xl font-bold text-gray-800 mb-3">
+            <h2 className="text-2xl font-bold text-gray-800 mb-3">
               {food.foodName}
-            </h3>
+            </h2>
             <p className="text-gray-600 text-md mb-3">{food.description}</p>
 
             {/* Additional Information */}
