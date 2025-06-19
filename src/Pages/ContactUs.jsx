@@ -28,14 +28,14 @@ const ContactUs = () => {
       <div className="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Left Side - Contact Information */}
         <div className="space-y-8">
-          <h1 className="text-4xl font-bold">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-[#F44336]">Contact Us</h1>
           <p>
             We are here to help! If you have any questions, comments, or
             concerns, please do not hesitate to reach out to us. Your feedback is
             important to us.
           </p>
           <div>
-            <h2 className="text-2xl font-semibold">Contact Information</h2>
+            <h2 className="text-2xl font-bold text-[#F44336]">Contact Information</h2>
             <ul className="mt-4 space-y-2">
               <li className="flex items-center space-x-2">
                 <span>📇</span>
