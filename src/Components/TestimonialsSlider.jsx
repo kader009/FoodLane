@@ -1,4 +1,3 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -48,9 +47,9 @@ const TestimonialsSlider = () => {
     <Container>
       <div className="px-5 py-10 bg-black">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-black text-[#F44336] mb-2">
+          <h1 className="text-4xl font-black text-[#F44336] mb-2">
             Testimonial
-          </h2>
+          </h1>
           <p className="text-lg mb-6 capitalize">
             Now you can see our valuable customer reviews
           </p>
@@ -67,10 +66,10 @@ const TestimonialsSlider = () => {
                   <img
                     src={testimonial.image}
                     alt={`${testimonial.name} image`}
-                    className="w-24 h-24 rounded-full mb-4"
+                    className="w-20 h-20 rounded-full mb-4"
                   />
                   <p className="text-gray-300 italic text-lg mb-4">
-                    "{testimonial.feedback}"
+                    {testimonial.feedback}
                   </p>
                   <h3 className="text-xl font-medium text-white">
                     {testimonial.name}
