@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+import Container from "../Components/Container";
+
 const pricingPlans = [
   {
     name: 'Silver',
     price: '$9.99',
-    features: ['1 Main Dish', '1 Soft Drink', 'Free Delivery'],
+    features: ['1 Main Dish', '1 Soft Drink', 'Free Delivery', 'Second time 2% dicount'],
     highlight: false,
   },
   {
@@ -14,16 +17,24 @@ const pricingPlans = [
   {
     name: 'Premium',
     price: '$29.99',
-    features: ['3 Main Dishes', '2 Desserts', '3 Soft Drinks', 'Priority Delivery'],
+    features: [
+      '3 Main Dishes',
+      '2 Desserts',
+      '3 Soft Drinks',
+      'Priority Delivery',
+    ],
     highlight: false,
   },
 ];
 
 export default function PricingSection() {
   return (
-    <section className="py-16 bg-black">
-      <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-10 text-[#F44336]">Combo Meal Deals</h1>
+    <Container>
+    <section className="py-12 bg-black">
+      <div className="max-w-7xl mx-auto px-4">
+        <h1 className="text-4xl font-bold text-center mb-10 text-[#F44336]">
+          Combo Meal Deals
+        </h1>
 
         <div className="grid gap-6 md:grid-cols-3">
           {pricingPlans.map((plan, index) => (
@@ -40,20 +51,26 @@ export default function PricingSection() {
                 </div>
               )}
 
-              <h3 className="text-xl font-semibold text-center mb-2">{plan.name}</h3>
-              <p className="text-4xl font-bold text-center text-white mb-4">{plan.price}</p>
+              <h3 className="text-xl font-semibold text-center mb-2">
+                {plan.name}
+              </h3>
+              <p className="text-4xl font-bold text-center text-white mb-4">
+                {plan.price}
+              </p>
 
               <ul className="space-y-2 mb-6">
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="text-white text-sm text-center">
-                    ✅ {feature}
+                    {feature}
                   </li>
                 ))}
               </ul>
 
               <div className="text-center">
                 <button className="bg-[#F44336] hover:bg-[#F44336] text-white font-semibold px-6 py-2 rounded transition duration-300">
+                  <Link to='/all-foods'>
                   Choose Plan
+                  </Link>
                 </button>
               </div>
             </div>
@@ -61,5 +78,6 @@ export default function PricingSection() {
         </div>
       </div>
     </section>
+    </Container>
   );
 }
