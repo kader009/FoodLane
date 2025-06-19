@@ -5,6 +5,7 @@ import ContactUs from '../ContactUs';
 import OurChefs from '../OurChef';
 import TopFood from '../TopFood';
 import TestimonialsSlider from '../../Components/TestimonialsSlider';
+import PricingSection from '../PricingSection';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <TopFood />
       <OurChefs />
       <TestimonialsSlider />
+      <PricingSection/>
       <ContactUs />
     </div>
   );
