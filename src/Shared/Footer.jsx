@@ -47,7 +47,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://instagram.com"
+              href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-blue-600"
