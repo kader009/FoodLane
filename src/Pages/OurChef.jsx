@@ -20,7 +20,7 @@ const chefs = [
     name: 'Emily Johnson',
     designation: 'Pastry Chef',
     image:
-      'https://us.123rf.com/450wm/serezniy/serezniy1809/serezniy180939857/110126965-african-american-chef-in-uniform-on-dark-background.jpg?ver=6',
+      'https://plus.unsplash.com/premium_photo-1667520221285-d223f52b73ef?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     rating: 4,
   },
 ];

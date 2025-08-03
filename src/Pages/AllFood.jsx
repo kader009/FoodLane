@@ -14,7 +14,9 @@ const AllFood = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://foodlane-server-api.onrender.com/foodData?page=${page}&limit=6`)
+      .get(
+        `https://foodlane-server-api.onrender.com/foodData?page=${page}&limit=6`
+      )
       .then((response) => {
         setFoodItems(response.data.foods);
         setTotalPages(response.data.totalPages);
@@ -97,15 +99,11 @@ const AllFood = () => {
                       <div className="font-bold text-xl mb-2">
                         {food.foodName}
                       </div>
-                      <p className="text-base">
-                        Category: {food.foodCategory}
-                      </p>
+                      <p className="text-base">Category: {food.foodCategory}</p>
                       <p className="font-bold mt-2 text-[#F44336]">
                         Price: ${food.price}
                       </p>
-                      <p className="text-sm mt-1">
-                        Quantity: {food.quantity}
-                      </p>
+                      <p className="text-sm mt-1">Quantity: {food.quantity}</p>
                     </div>
                     <div className="px-4 pb-4 flex justify-start">
                       <button className="flex items-center bg-[#F44336] text-white px-4 py-2 rounded hover:bg-[#D32F2F] transition-colors">
