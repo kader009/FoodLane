@@ -73,7 +73,7 @@ const AllFood = () => {
 
           {/* Loading Spinner */}
           {loading ? (
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center min-h-screen">
               <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full border-t-[#F44336]"></div>
             </div>
           ) : filteredItems.length === 0 ? (
