@@ -20,8 +20,15 @@ const chefs = [
     name: 'Emily Johnson',
     designation: 'Pastry Chef',
     image:
-      'https://plus.unsplash.com/premium_photo-1667520221285-d223f52b73ef?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.pexels.com/photos/10432616/pexels-photo-10432616.jpeg',
     rating: 4,
+  },
+  {
+    name: 'Erik Rowan',
+    designation: 'Pizza Chef',
+    image:
+      'https://images.pexels.com/photos/8093867/pexels-photo-8093867.jpeg',
+    rating: 4.5,
   },
 ];
 
