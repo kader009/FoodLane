@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Container from '../Components/Container';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import FoodSkeleton from '../Components/FoodSkeleton';
 
 const AllFood = () => {
   const [foodItems, setFoodItems] = useState([]);
@@ -73,9 +74,13 @@ const AllFood = () => {
 
           {/* Loading Spinner */}
           {loading ? (
-            <div className="flex justify-center items-center min-h-screen">
-              <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full border-t-[#F44336]"></div>
-            </div>
+            <Container>
+          <div className="flex items-center justify-center flex-wrap gap-4">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <FoodSkeleton key={i} />
+            ))}
+          </div>
+        </Container>
           ) : filteredItems.length === 0 ? (
             <div className="flex justify-center items-center">
               <p className="text-white text-lg">
