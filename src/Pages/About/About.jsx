@@ -5,7 +5,7 @@ const About = () => {
         <img
           src="https://images.pexels.com/photos/10927834/pexels-photo-10927834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="FoodLane Restaurant"
-          className="rounded-lg shadow-lg w-full h-full object-cover"
+          className="rounded shadow-lg w-full h-full object-cover"
         />
       </div>
 

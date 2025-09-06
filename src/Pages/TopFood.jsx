@@ -43,7 +43,7 @@ const TopFood = () => {
             {foods.slice(0, 6).map((food) => (
               <div
                 key={food._id}
-                className="w-96 mx-auto bg-white rounded-lg shadow-md overflow-hidden transform transition-transform hover:scale-105 duration-300 mb-3"
+                className="w-96 mx-auto bg-white rounded shadow-md overflow-hidden transform transition-transform hover:scale-105 duration-300 mb-3"
               >
                 <img
                   src={food.foodImage}

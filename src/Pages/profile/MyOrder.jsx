@@ -112,7 +112,7 @@ const MyOrder = () => {
                       {foods?.map((food) => (
                         <div
                           key={food._id}
-                          className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-2xl duration-300"
+                          className="bg-white rounded shadow-lg overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-2xl duration-300"
                         >
                           <div className="relative w-full h-56 overflow-hidden">
                             <img

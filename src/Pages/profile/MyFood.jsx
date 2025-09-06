@@ -58,7 +58,7 @@ const MyFood = () => {
                 {foods.map((food) => (
                   <div
                     key={food._id}
-                    className="w-full sm:w-auto mx-auto bg-white rounded-xl shadow-md overflow-hidden transform transition-transform hover:scale-105 duration-300 mb-3"
+                    className="w-full sm:w-auto mx-auto bg-white rounded shadow-md overflow-hidden transform transition-transform hover:scale-105 duration-300 mb-3"
                   >
                     <img
                       src={food.foodImage}
