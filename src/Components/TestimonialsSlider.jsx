@@ -90,7 +90,7 @@ const TestimonialsSlider = () => {
                   {/* Quote icon */}
                   <div className="absolute -top-4 -left-4 text-6xl text-[#F44336] opacity-20 font-serif"></div>
 
-                  <div className="relative bg-gradient-to-br from-gray-900 via-gray-950 to-black rounded-2xl p-8 shadow-2xl border border-gray-800 hover:border-[#F44336] transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(244,67,54,0.1)]">
+                  <div className="relative bg-gradient-to-br from-gray-900 via-gray-950 to-black rounded p-8 shadow-2xl border border-gray-800 hover:border-[#F44336] transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(244,67,54,0.1)]">
                     {/* Profile section */}
                     <div className="flex flex-col items-center mb-6">
                       <div className="relative mb-4">
