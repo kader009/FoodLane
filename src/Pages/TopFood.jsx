@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Container from '../Components/Container';
-import LoadingSpinner from '../Components/LoadingSpinner';
+import FoodSkeleton from '../Components/FoodSkeleton';
 
 const TopFood = () => {
   const [foods, SetFoods] = useState([]);
@@ -30,7 +30,13 @@ const TopFood = () => {
       </p>
 
       {loading ? (
-        <LoadingSpinner />
+        <Container>
+          <div className="flex items-center justify-center flex-wrap gap-4">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <FoodSkeleton key={i} />
+            ))}
+          </div>
+        </Container>
       ) : (
         <Container>
           <div className=" flex items-center justify-center flex-wrap gap-4 ">
