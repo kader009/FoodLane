@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import LoadingSpinner from '../Components/LoadingSpinner';
 import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
+import FoodGallerySkeleton from '../Components/FoodGallerySkeleton';
 
 const FoodCard = ({ food }) => {
   return (
@@ -49,8 +49,10 @@ const Gallery = () => {
           Our listed food item gallery for show foods
         </p>
         {loading ? (
-          <div className="text-center">
-            <LoadingSpinner />
+          <div className="flex flex-wrap justify-center">
+            {Array.from({ length: 10 }).map((_, index) => (
+              <FoodGallerySkeleton key={index} />
+            ))}
           </div>
         ) : (
           <div className="flex flex-wrap justify-center">
