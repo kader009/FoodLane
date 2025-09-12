@@ -1,6 +1,6 @@
 const FoodGallerySkeleton = () => {
   return (
-    <div className="relative w-64 h-80 overflow-hidden rounded-lg shadow-lg bg-gray-800 mx-4 my-4">
+    <div className="relative w-64 h-80 overflow-hidden rounded-lg shadow-lg bg-gray-800 mx-4 my-4 animate-pulse">
       {/* image placeholder */}
       <div className="w-full h-full bg-gray-700"></div>
 
