@@ -1,6 +1,6 @@
 const FoodSkeleton = () => {
   return (
-    <div className="w-96 mx-auto bg-white rounded-xl shadow-md overflow-hidden animate-pulse mb-3">
+    <div className="w-96 mx-auto bg-white rounded-xl shadow-md overflow-hidden mb-3">
       <div className="w-full h-48 bg-gray-300"></div>
       <div className="p-4 space-y-3">
         <div className="h-5 w-3/4 bg-gray-300 rounded"></div>
