@@ -1,15 +1,17 @@
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
+import { motion } from 'motion/react';
+import { NavbarVariants } from '../Components/animation/variants';
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const handlelogOut = () =>{
-    logOut().then(() =>{
-      navigate('/login')
-    })
-  }
+  const handlelogOut = () => {
+    logOut().then(() => {
+      navigate('/login');
+    });
+  };
 
   return (
     <div className="navbar bg-[rgba(8,8,8,7)] sticky top-0 z-10">
@@ -21,6 +23,7 @@ const Navbar = () => {
           FoodLane
         </Link>
       </div>
+
       <div className="flex-none gap-2">
         {/* Mobile Menu */}
         <div className="dropdown dropdown-end lg:hidden">
@@ -39,7 +42,11 @@ const Navbar = () => {
               ></path>
             </svg>
           </button>
-          <ul
+          <motion.ul
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={NavbarVariants}
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-gray-900 rounded-box w-52"
           >
@@ -97,7 +104,7 @@ const Navbar = () => {
                 </li>
               </>
             )}
-          </ul>
+          </motion.ul>
         </div>
 
         {/* PC Menu */}
