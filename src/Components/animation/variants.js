@@ -14,7 +14,27 @@ export const ChefCard = {
 };
 
 export const NavbarVariants = {
-  hidden: { opacity: 0, y: -10, scale: 0.95 },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.3, ease: 'easeOut' } },
-  exit: { opacity: 0, y: -10, scale: 0.95, transition: { duration: 0.2, ease: 'easeIn' } },
+  hidden: {
+    opacity: 0,
+    y: -10,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      when: 'beforeChildren',
+      staggerChildren: 0.1,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -10,
+    transition: { when: 'afterChildren' },
+  },
+};
+
+export const itemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+  exit: { opacity: 0, x: -20, transition: { duration: 0.2 } },
 };
