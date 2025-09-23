@@ -39,7 +39,7 @@ const TopFood = () => {
         </Container>
       ) : (
         <Container>
-          <div className=" flex items-center justify-center flex-wrap gap-4 ">
+          <div className="flex items-center justify-center flex-wrap gap-4">
             {foods.slice(0, 6).map((food) => (
               <div
                 key={food._id}
