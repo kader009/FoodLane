@@ -66,7 +66,7 @@ const AllFood = () => {
             <input
               type="text"
               placeholder="Search for your food..."
-              className="w-full max-w-lg px-4 py-2 text-black rounded-md mb-4"
+              className="w-full max-w-lg px-4 py-2 text-black rounded-full mb-4 focus:outline-none focus:ring-2 focus:ring-[#F44336]"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
