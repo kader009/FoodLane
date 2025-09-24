@@ -56,7 +56,7 @@ const AllFood = () => {
           <h1 className="text-4xl font-black text-[#F44336]">
             Food Listing Page
           </h1>
-          <p className="capitalize mt-3 text-lg">
+          <p className="capitalize mt-1 text-lg">
             We provide the best food items for our customers
           </p>
         </header>
