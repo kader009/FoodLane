@@ -1,7 +1,6 @@
 import Container from '../Components/Container';
 import { FaStar } from 'react-icons/fa';
 import { motion } from 'motion/react';
-import { ChefCard, parentVariant } from '../Components/animation/variants';
 
 const chefs = [
   {
@@ -45,22 +44,12 @@ const OurChefs = () => {
           a delight.
         </p>
         <Container>
-          <motion.div
-            // variants={parentVariant}
-            // initial="hidden"
-            // whileInView="visible"
-            // viewport={{ once: true, amount: 0.3 }}
-            className="flex flex-wrap justify-center"
-          >
+          <div className="flex flex-wrap justify-center">
             {chefs.map((chef, index) => (
               <motion.div
                 key={index}
-                // variants={ChefCard}
-                // initial="hidden"
-                // whileInView="visible"
-                // viewport={{ once: true, amount: 0.3 }}
-                initial={{ opacity: 0}}
-                whileInView={{opacity:1, scale:1}}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="w-full sm:w-1/2 lg:w-1/3 px-2 sm:px-4 mb-8"
               >
@@ -87,7 +76,7 @@ const OurChefs = () => {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </Container>
       </div>
     </section>

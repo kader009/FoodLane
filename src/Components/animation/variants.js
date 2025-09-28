@@ -8,29 +8,6 @@ export const slideUp = {
   visible: { opacity: 1, y: 0 },
 };
 
-export const parentVariant = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.25,
-    },
-  },
-};
-
-export const ChefCard = {
-  hidden: { opacity: 0, y: 40, scale: 0.9 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      duration: 0.25,
-      ease: [0.4, 0, 0.2, 1],
-    },
-  },
-};
-
 export const NavbarVariants = {
   hidden: {
     opacity: 0,
