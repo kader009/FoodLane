@@ -46,19 +46,22 @@ const OurChefs = () => {
         </p>
         <Container>
           <motion.div
-            variants={parentVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            // variants={parentVariant}
+            // initial="hidden"
+            // whileInView="visible"
+            // viewport={{ once: true, amount: 0.3 }}
             className="flex flex-wrap justify-center"
           >
             {chefs.map((chef, index) => (
               <motion.div
                 key={index}
-                variants={ChefCard}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
+                // variants={ChefCard}
+                // initial="hidden"
+                // whileInView="visible"
+                // viewport={{ once: true, amount: 0.3 }}
+                initial={{ opacity: 0}}
+                whileInView={{opacity:1, scale:1}}
+                transition={{ duration: 0.5, delay: 0.4 }}
                 className="w-full sm:w-1/2 lg:w-1/3 px-2 sm:px-4 mb-8"
               >
                 <div className="bg-gray-950 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ease-in-out">
