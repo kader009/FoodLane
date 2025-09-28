@@ -50,7 +50,7 @@ const OurChefs = () => {
                 key={index}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                transition={{ duration: 0.5, delay: 0.4, ease: 'easeInOut' }}
                 className="w-full sm:w-1/2 lg:w-1/3 px-2 sm:px-4 mb-8"
               >
                 <div className="bg-gray-950 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ease-in-out">
