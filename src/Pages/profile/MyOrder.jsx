@@ -87,7 +87,7 @@ const MyOrder = () => {
             </p>
 
             {loading ? (
-              <LoadingSpinner />
+                <LoadingSpinner />
             ) : (
               <>
                 {foods?.length === 0 ? (
