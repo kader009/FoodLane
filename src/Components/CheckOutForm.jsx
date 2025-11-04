@@ -25,7 +25,7 @@ const CheckOutForm = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [user?.email]);
 
   // total cost for order
   const totalCost = foods.reduce(
@@ -63,7 +63,7 @@ const CheckOutForm = () => {
       return;
     }
 
-    const { error, paymentMethod } = await stripe.createPaymentMethod({
+    const { error } = await stripe.createPaymentMethod({
       type: 'card',
       card,
     });
