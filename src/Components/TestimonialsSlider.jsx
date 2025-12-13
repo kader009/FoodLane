@@ -130,7 +130,7 @@ const TestimonialsSlider = () => {
           </Swiper>
 
           {/* Bottom decorative text */}
-          <div className="mt-8 text-gray-600 text-sm">
+          <div className="mt-8 text-white text-sm">
             ⭐ Trusted by food lovers ⭐
           </div>
         </div>
