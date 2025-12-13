@@ -8,7 +8,7 @@ const AddFood = () => {
   const [foodName, setFoodName] = useState('');
   const [foodImage, setFoodImage] = useState('');
   const [foodCategory, setFoodCategory] = useState('');
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(0);
   const [price, setPrice] = useState('');
   const [foodOrigin, setFoodOrigin] = useState('');
   const [description, setDescription] = useState('');
