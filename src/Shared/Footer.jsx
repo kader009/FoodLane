@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <>
+    <div className='p-10'>
       <div className="w-full h-2 shadow-lg"></div>
+      <hr />
       <footer className="footer text-gray-400 pt-8 pb-4 px-2">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
           {/* Logo & Tagline */}
@@ -118,7 +119,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} FoodLane. All rights reserved
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 
