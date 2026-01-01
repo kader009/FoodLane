@@ -142,10 +142,11 @@ const Navbar = () => {
           </ul>
           {user && (
             <div className="dropdown dropdown-end">
-              <div
+              <button
                 tabIndex={0}
                 role="button"
                 className="btn btn-ghost btn-circle avatar"
+                aria-label="User Menu"
               >
                 <div className="w-11 rounded-full">
                   <img
@@ -156,7 +157,7 @@ const Navbar = () => {
                     }
                   />
                 </div>
-              </div>
+              </button>
               <ul
                 tabIndex={0}
                 className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content rounded-box w-52 bg-gray-900"

@@ -9,20 +9,21 @@ import PricingSection from '../PricingSection';
 
 const Home = () => {
   return (
-    <div>
-      <div>
-        <Helmet>
-          <title>FoodLane</title>
-        </Helmet>
-      </div>
-      <Banner />
-      <About />
-      <TopFood />
-      <OurChefs />
-      <TestimonialsSlider />
-      <PricingSection/>
-      <ContactUs />
-    </div>
+    <>
+      <Helmet>
+        <title>FoodLane</title>
+      </Helmet>
+
+      <main>
+        <Banner />
+        <About />
+        <TopFood />
+        <OurChefs />
+        <TestimonialsSlider />
+        <PricingSection />
+        <ContactUs />
+      </main>
+    </>
   );
 };
 

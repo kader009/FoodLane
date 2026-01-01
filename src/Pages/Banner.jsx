@@ -39,7 +39,7 @@ const Banner = () => {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="bg-[#F44336] p-2 rounded"
+            className="bg-[#FF6B6B] p-2 rounded"
           >
             <Link to={'all-foods'}>View All Food</Link>
           </motion.button>

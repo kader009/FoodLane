@@ -104,9 +104,9 @@ const TestimonialsSlider = () => {
                         </div>
                       </div>
 
-                      <h3 className="text-xl font-semibold text-white mb-1">
+                      <h2 className="text-xl font-semibold text-white mb-1">
                         {testimonial.name}
-                      </h3>
+                      </h2>
 
                       {/* Rating stars */}
                       <div className="text-yellow-400 text-lg mb-4">

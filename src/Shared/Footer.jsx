@@ -63,6 +63,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 href="https://facebook.com"
+                aria-label="follow us on facebook page"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-[#1877f3] transition-transform transform hover:scale-125 duration-200"
@@ -82,6 +83,7 @@ const Footer = () => {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="follow us on twitter page"
                 className="text-white hover:text-[#1da1f2] transition-transform transform hover:scale-125 duration-200"
               >
                 {/* Twitter Icon */}
@@ -99,6 +101,7 @@ const Footer = () => {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="follow us on youtube page"
                 className="text-white hover:text-[#ff0000] transition-transform transform hover:scale-125 duration-200"
               >
                 {/* YouTube Icon */}
