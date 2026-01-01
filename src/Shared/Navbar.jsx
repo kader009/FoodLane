@@ -32,6 +32,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="btn btn-ghost btn-circle"
+            aria-label="Toggle navigation menu"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -52,9 +52,9 @@ const TopFood = () => {
                   loading="lazy"
                 />
                 <div className="p-4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  <h2 className="text-xl font-bold text-gray-800 mb-2">
                     {food.foodName}
-                  </h3>
+                  </h2>
                   <p className="text-gray-600 text-sm mb-4">
                     {food.description}
                   </p>
