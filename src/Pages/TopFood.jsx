@@ -36,7 +36,7 @@ const TopFood = () => {
       ) : (
         <Container>
           <div className="flex items-center justify-center flex-wrap gap-4">
-            {foods.slice(0, 6).map((food) => (
+            {foods.slice(0, 6).map((food, index) => (
               <div
                 key={food._id}
                 className="w-96 mx-auto bg-white rounded shadow-md overflow-hidden transform transition-transform hover:scale-105 duration-300 mb-3"
@@ -53,7 +53,7 @@ const TopFood = () => {
                   width={650}
                   height={400}
                   className="w-full h-48 object-cover"
-                  loading="lazy"
+                  loading={index === 0 ? "eager" : "lazy"}
                 />
                 <div className="p-4">
                   <h2 className="text-xl font-bold text-gray-800 mb-2">

@@ -3,8 +3,8 @@ import { lazy, Suspense } from 'react';
 
 import Banner from '../Banner';
 import About from '../About/About';
-import TopFood from '../TopFood';
 
+const TopFood = lazy(() => import('../TopFood'));
 const OurChefs = lazy(() => import('../OurChef'));
 const TestimonialsSlider = lazy(() =>
   import('../../Components/TestimonialsSlider')
@@ -22,10 +22,9 @@ const Home = () => {
       <main>
         <Banner />
         <About />
-        <TopFood />
 
-        {/* React.lazy() splits code, but loads immediately without viewport detection */}
         <Suspense fallback={<div className="h-96 animate-pulse bg-gray-800" />}>
+        <TopFood />
           <OurChefs />
           <TestimonialsSlider />
           <PricingSection />
