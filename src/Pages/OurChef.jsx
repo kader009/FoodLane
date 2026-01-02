@@ -59,6 +59,7 @@ const OurChefs = () => {
                     src={chef.image}
                     alt={chef.name}
                     className="w-40 h-40 rounded-full mx-auto mb-4 object-cover"
+                    loading='lazy'
                   />
                   <h3 className="text-xl font-semibold mb-2 text-white">
                     {chef.name}

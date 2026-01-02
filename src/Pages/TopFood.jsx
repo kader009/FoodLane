@@ -1,25 +1,19 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Container from '../Components/Container';
 import FoodSkeleton from '../Components/FoodSkeleton';
+import { useQuery } from '@tanstack/react-query';
+
+const fetchFoods = async () => {
+  const { data } = await axios.get('https://foodlane-server-api.onrender.com/foodData');
+  return data.foods || [];
+};
 
 const TopFood = () => {
-  const [foods, SetFoods] = useState([]);
-  const [loading, SetLoading] = useState(true);
-
-  useEffect(() => {
-    axios
-      .get('https://foodlane-server-api.onrender.com/foodData')
-      .then((res) => {
-        SetFoods(res.data.foods || []);
-        SetLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching food items:', error);
-        SetLoading(false);
-      });
-  }, []);
+  const { data: foods = [], isLoading } = useQuery({
+    queryKey: ['foods'],
+    queryFn: fetchFoods,
+  });
 
   return (
     <div className="bg-black text-center">
@@ -29,7 +23,7 @@ const TopFood = () => {
         flavor. Savor <br /> a culinary journey that delights every bite.
       </p>
 
-      {loading ? (
+      {isLoading ? (
         <Container>
           <div className="flex items-center justify-center flex-wrap gap-4">
             {Array.from({ length: 6 }).map((_, i) => (
@@ -48,6 +42,8 @@ const TopFood = () => {
                 <img
                   src={food.foodImage}
                   alt={food.foodName}
+                  width={650}
+                  height={400}
                   className="w-full h-48 object-cover"
                   loading="lazy"
                 />
