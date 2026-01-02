@@ -16,7 +16,12 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>FoodLane</title>
+        <title>FoodLane - Order Delicious Food Online</title>
+        <meta
+          name="description"
+          content="Browse our menu, order your favorite dishes, and get it delivered fresh to your door. Fast delivery, quality food."
+        />
+        <link rel="canonical" href="https://foodlane.vercel.app/" />
       </Helmet>
 
       <main>
@@ -24,7 +29,7 @@ const Home = () => {
         <About />
 
         <Suspense fallback={<div className="h-96 animate-pulse bg-gray-800" />}>
-        <TopFood />
+          <TopFood />
           <OurChefs />
           <TestimonialsSlider />
           <PricingSection />

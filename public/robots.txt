@@ -1,0 +1,14 @@
+# robots.txt for FoodLane
+User-agent: *
+Allow: /
+
+# Disallow private/protected routes
+Disallow: /my-order
+Disallow: /my-food
+Disallow: /add-food
+Disallow: /payment
+Disallow: /payment-history
+Disallow: /edit-food/
+
+# Sitemap location
+Sitemap: https://foodlane.vercel.app/sitemap.xml
