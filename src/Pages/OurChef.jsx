@@ -7,28 +7,28 @@ const chefs = [
     name: 'John Doe',
     designation: 'Head Chef',
     image:
-      'https://mir-s3-cdn-cf.behance.net/projects/404/94fafc78689473.Y3JvcCwxMzY2LDEwNjgsMCwyMzM.jpg?auto=compress&cs=tinysrgb&w=400&h=400',
+      '/images/johndoe.webp',
     rating: 5,
   },
   {
     name: 'Jane Smith',
     designation: 'Sous Chef',
     image:
-      'https://img.freepik.com/premium-photo/chef-woman-wearing-white-uniform-dark-background-generative-ai_58409-30398.jpg?auto=compress&cs=tinysrgb&w=400&h=400',
+      '/images/janesmith.webp',
     rating: 4,
   },
   {
     name: 'Emily Johnson',
     designation: 'Pastry Chef',
     image:
-      'https://images.pexels.com/photos/10432616/pexels-photo-10432616.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
+      '/images/emily.webp',
     rating: 4,
   },
   {
     name: 'Erik Rowan',
     designation: 'Pizza Chef',
     image: 
-      'https://images.pexels.com/photos/8093867/pexels-photo-8093867.jpeg?auto=compress&cs=tinysrgb&w=400&h=400',
+      '/images/erik.webp',
     rating: 4.5,
   },
 ];
