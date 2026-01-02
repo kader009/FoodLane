@@ -5,7 +5,9 @@ import FoodSkeleton from '../Components/FoodSkeleton';
 import { useQuery } from '@tanstack/react-query';
 
 const fetchFoods = async () => {
-  const { data } = await axios.get('https://foodlane-server-api.onrender.com/foodData');
+  const { data } = await axios.get(
+    'https://foodlane-server-api.onrender.com/foodData'
+  );
   return data.foods || [];
 };
 
@@ -40,7 +42,13 @@ const TopFood = () => {
                 className="w-96 mx-auto bg-white rounded shadow-md overflow-hidden transform transition-transform hover:scale-105 duration-300 mb-3"
               >
                 <img
-                  src={food.foodImage}
+                  src={`${food.foodImage}?w=650&h=400&q=80&f=auto`}
+                  srcSet={`
+                  ${food.foodImage}?w=320&h=200&q=80&f=auto 320w,
+                  ${food.foodImage}?w=650&h=400&q=80&f=auto 650w,
+                  ${food.foodImage}?w=1300&h=800&q=80&f=auto 1300w
+                `}
+                  sizes="(max-width: 640px) 320px, (max-width: 1024px) 650px, 1300px"
                   alt={food.foodName}
                   width={650}
                   height={400}

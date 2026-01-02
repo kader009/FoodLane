@@ -15,6 +15,22 @@
       rel="stylesheet"
     />
     <title>FoodLane</title>
+    <!-- DNS resolution (earliest) -->
+    <link rel="dns-prefetch" href="https://foodlane-server-api.onrender.com" />
+
+    <!-- TCP + TLS handshake -->
+    <link rel="preconnect" href="https://foodlane-server-api.onrender.com" />
+
+    <!-- Prefetch next page users will likely visit -->
+    <link rel="prefetch" href="/all-foods" as="document" />
+
+    <!-- Preload hero image (LCP element) -->
+    <link
+      rel="preload"
+      href="/images/hero-banner.webp"
+      as="image"
+      fetchpriority="high"
+    />
   </head>
   <body>
     <div id="root"></div>
