@@ -4,6 +4,7 @@ import Container from '../Components/Container';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import FoodSkeleton from '../Components/FoodSkeleton';
+import OptimizedImage from '../Components/OptimizedImage';
 
 const AllFood = () => {
   const [foodItems, setFoodItems] = useState([]);
@@ -75,12 +76,12 @@ const AllFood = () => {
           {/* Loading Spinner */}
           {loading ? (
             <Container>
-          <div className="flex items-center justify-center flex-wrap gap-4">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <FoodSkeleton key={i} />
-            ))}
-          </div>
-        </Container>
+              <div className="flex items-center justify-center flex-wrap gap-4">
+                {Array.from({ length: 6 }).map((_, i) => (
+                  <FoodSkeleton key={i} />
+                ))}
+              </div>
+            </Container>
           ) : filteredItems.length === 0 ? (
             <div className="flex justify-center items-center">
               <p className="text-white text-lg">
@@ -95,10 +96,12 @@ const AllFood = () => {
                     key={food._id}
                     className="w-full max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white text-black"
                   >
-                    <img
+                    <OptimizedImage
                       className="w-full h-48 object-cover"
                       src={food.foodImage}
                       alt={food.foodName}
+                      width={400}
+                      height={300}
                     />
                     <div className="px-4 py-6">
                       <div className="font-bold text-xl mb-2">

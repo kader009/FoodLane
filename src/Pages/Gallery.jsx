@@ -3,13 +3,16 @@ import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import FoodGallerySkeleton from '../Components/FoodGallerySkeleton';
+import OptimizedImage from '../Components/OptimizedImage';
 
 const FoodCard = ({ food }) => {
   return (
     <div className="relative w-64 h-80 overflow-hidden rounded-lg shadow-lg bg-gray-950 mx-4 my-4">
-      <img
+      <OptimizedImage
         src={food.foodImage}
         alt={food.foodName}
+        width={320}
+        height={400}
         className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
       />
       <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">

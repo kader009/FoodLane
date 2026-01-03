@@ -5,6 +5,7 @@ import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import Container from '../../Components/Container';
 import { Helmet } from 'react-helmet-async';
+import OptimizedImage from '../../Components/OptimizedImage';
 
 const MyOrder = () => {
   const { user, logOut } = useAuth();
@@ -87,7 +88,7 @@ const MyOrder = () => {
             </p>
 
             {loading ? (
-                <LoadingSpinner />
+              <LoadingSpinner />
             ) : (
               <>
                 {foods?.length === 0 ? (
@@ -115,9 +116,11 @@ const MyOrder = () => {
                           className="bg-white rounded shadow-lg overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-2xl duration-300"
                         >
                           <div className="relative w-full h-56 overflow-hidden">
-                            <img
+                            <OptimizedImage
                               src={food.foodImage}
                               alt={food.foodName}
+                              width={400}
+                              height={300}
                               className="w-full h-full object-cover transition-transform transform hover:scale-110 duration-300"
                             />
                             <div className="absolute inset-0 bg-black bg-opacity-20"></div>

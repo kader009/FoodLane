@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, useParams } from 'react-router-dom';
+import OptimizedImage from '../Components/OptimizedImage';
 
 const SingleFood = () => {
   const { id } = useParams();
@@ -37,11 +38,13 @@ const SingleFood = () => {
         </p>
 
         <div className="w-full max-w-lg mx-auto bg-white rounded-lg shadow-lg overflow-hidden hover:scale-95 transform transition duration-300 mb-10">
-          <img
+          <OptimizedImage
             src={food.foodImage}
             alt={food.foodName}
             className="w-full h-56 object-cover"
-            loading="lazy"
+            width={512}
+            height={340}
+            priority={true}
           />
           <div className="p-6">
             <h2 className="text-2xl font-bold text-gray-800 mb-3">

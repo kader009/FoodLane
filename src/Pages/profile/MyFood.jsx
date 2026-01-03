@@ -5,6 +5,7 @@ import Container from '../../Components/Container';
 import { Link } from 'react-router-dom';
 import LoadingSpinner from '../../Components/LoadingSpinner';
 import { Helmet } from 'react-helmet-async';
+import OptimizedImage from '../../Components/OptimizedImage';
 
 const MyFood = () => {
   const { user } = useAuth();
@@ -60,9 +61,11 @@ const MyFood = () => {
                     key={food._id}
                     className="w-full sm:w-auto mx-auto bg-white rounded shadow-md overflow-hidden transform transition-transform hover:scale-105 duration-300 mb-3"
                   >
-                    <img
+                    <OptimizedImage
                       src={food.foodImage}
                       alt={food.foodName}
+                      width={400}
+                      height={300}
                       className="w-full h-48 object-cover"
                     />
                     <div className="p-4">
