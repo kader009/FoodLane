@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-[rgba(8,8,8,7)] sticky top-0 z-10">
+    <div className="navbar bg-[rgba(8,8,8,7)] sticky top-0 z-50">
       <div className="flex-1">
         <Link
           to="/"
