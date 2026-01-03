@@ -49,6 +49,7 @@ const TopFood = () => {
                   height={400}
                   className="w-full h-48 object-cover"
                   priority={index === 0}
+                  loading={index < 2 ? 'eager' : 'lazy'}
                 />
                 <div className="p-4">
                   <h2 className="text-xl font-bold text-gray-800 mb-2">

@@ -6,29 +6,25 @@ const chefs = [
   {
     name: 'John Doe',
     designation: 'Head Chef',
-    image:
-      '/images/johndoe.webp',
+    image: '/images/johndoe.webp',
     rating: 5,
   },
   {
     name: 'Jane Smith',
     designation: 'Sous Chef',
-    image:
-      '/images/janesmith.webp',
+    image: '/images/janesmith.webp',
     rating: 4,
   },
   {
     name: 'Emily Johnson',
     designation: 'Pastry Chef',
-    image:
-      '/images/emily.webp',
+    image: '/images/emily.webp',
     rating: 4,
   },
   {
     name: 'Erik Rowan',
     designation: 'Pizza Chef',
-    image: 
-      '/images/erik.webp',
+    image: '/images/erik.webp',
     rating: 4.5,
   },
 ];
@@ -58,8 +54,11 @@ const OurChefs = () => {
                   <img
                     src={chef.image}
                     alt={chef.name}
+                    width="160"
+                    height="160"
                     className="w-40 h-40 rounded-full mx-auto mb-4 object-cover"
-                    loading='lazy'
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
                   />
                   <h3 className="text-xl font-semibold mb-2 text-white">
                     {chef.name}

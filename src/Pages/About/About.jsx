@@ -5,6 +5,7 @@ import {
   useMotionTemplate,
 } from 'framer-motion';
 import { useRef } from 'react';
+import OptimizedImage from '../../Components/OptimizedImage';
 
 const About = () => {
   const ref = useRef(null);
@@ -40,10 +41,13 @@ const About = () => {
         style={imgStyle}
         className="lg:w-1/2 flex justify-center mb-10 lg:mb-0"
       >
-        <img
+        <OptimizedImage
           src="https://images.pexels.com/photos/10927834/pexels-photo-10927834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="FoodLane Restaurant"
+          width={800}
+          height={600}
           className="rounded shadow-lg w-full h-full object-cover"
+          priority={true}
         />
       </motion.div>
 
