@@ -1,15 +1,15 @@
 import { createBrowserRouter } from 'react-router-dom';
-import About from '../Pages/About/About';
+import About from '../Pages/about/About';
 import MainLayout from '../Layout/MainLayout';
-import Home from '../Pages/Home/Home';
+import Home from '../Pages/home/Home';
 import ErrorPage from '../Pages/ErrorPage';
-import Login from '../Pages/Account/Login';
-import Register from '../Pages/Account/Register';
+import Login from '../Pages/auth/Login';
+import Register from '../Pages/auth/Register';
 import AllFood from '../Pages/AllFood';
 import Gallery from '../Pages/Gallery';
-import MyFood from '../Pages/profile/MyFood';
-import AddFood from '../Pages/profile/AddFood';
-import MyOrder from '../Pages/profile/MyOrder';
+import MyFood from '../Pages/food/MyFood';
+import AddFood from '../Pages/food/AddFood';
+import MyOrder from '../Pages/food/MyOrder';
 import SingleFood from '../Pages/SingleFood';
 import EditItem from '../Pages/EditItem';
 import PurchasePage from '../Pages/PurchasePage';
@@ -43,7 +43,9 @@ export const router = createBrowserRouter([
         path: 'my-food/editItem/:id',
         element: <EditItem />,
         loader: ({ params }) =>
-          fetch(`https://foodlane-server-api.onrender.com/foodData/get/${params.id}`),
+          fetch(
+            `https://foodlane-server-api.onrender.com/foodData/get/${params.id}`
+          ),
       },
       {
         path: '/add-food',
@@ -65,7 +67,9 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://foodlane-server-api.onrender.com/foodData/get/${params.id}`),
+          fetch(
+            `https://foodlane-server-api.onrender.com/foodData/get/${params.id}`
+          ),
       },
       {
         path: '/gallery',

@@ -1,9 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { lazy, Suspense } from 'react';
-
 import Banner from '../Banner';
 import About from '../About/About';
-
 const TopFood = lazy(() => import('../TopFood'));
 const OurChefs = lazy(() => import('../OurChef'));
 const TestimonialsSlider = lazy(() =>
