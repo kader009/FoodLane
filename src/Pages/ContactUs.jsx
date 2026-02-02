@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ContactUs = () => {
   const [form, setForm] = useState({
@@ -31,11 +32,13 @@ const ContactUs = () => {
           <h1 className="text-4xl font-bold text-[#F44336]">Contact Us</h1>
           <p>
             We are here to help! If you have any questions, comments, or
-            concerns, please do not hesitate to reach out to us. Your feedback is
-            important to us.
+            concerns, please do not hesitate to reach out to us. Your feedback
+            is important to us.
           </p>
           <div>
-            <h2 className="text-2xl font-bold text-[#F44336]">Contact Information</h2>
+            <h2 className="text-2xl font-bold text-[#F44336]">
+              Contact Information
+            </h2>
             <ul className="mt-4 space-y-2">
               <li className="flex items-center space-x-2">
                 <span>📇</span>
@@ -58,15 +61,15 @@ const ContactUs = () => {
           <div>
             <h2 className="text-2xl font-semibold">Follow Us</h2>
             <div className="flex space-x-4 mt-2">
-              <a href="#" className="text-white hover:underline">
+              <Link to="https://facebook.com" className="text-white hover:underline">
                 Facebook
-              </a>
-              <a href="#" className="text-white hover:underline">
-                Instagram
-              </a>
-              <a href="#" className="text-white hover:underline">
+              </Link>
+              <Link to="https://twitter.com" className="text-white hover:underline">
                 Twitter
-              </a>
+              </Link>
+              <Link to="https://youtube.com" className="text-white hover:underline">
+                Youtube
+              </Link>
             </div>
           </div>
         </div>
