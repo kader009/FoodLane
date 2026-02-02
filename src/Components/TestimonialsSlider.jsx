@@ -131,7 +131,7 @@ const TestimonialsSlider = () => {
 
           {/* Bottom decorative text */}
           <div className="mt-8 text-white text-sm">
-            ⭐ Trusted by food lovers ⭐
+            Trusted by food lovers
           </div>
         </div>
       </div>
