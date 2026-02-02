@@ -32,12 +32,6 @@ const Footer = () => {
               All Food
             </Link>
             <Link
-              to="/about"
-              className="hover:text-[#F44336] transition-colors"
-            >
-              About
-            </Link>
-            <Link
               to="/contact-us"
               className="hover:text-[#F44336] transition-colors"
             >

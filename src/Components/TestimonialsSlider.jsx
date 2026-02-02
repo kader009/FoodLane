@@ -129,9 +129,43 @@ const TestimonialsSlider = () => {
             ))}
           </Swiper>
 
-          {/* Bottom decorative text */}
-          <div className="mt-8 text-white text-sm">
-            Trusted by food lovers
+          {/* Bottom decorative text with heroicon-style icons */}
+          <div className="mt-8 text-white text-sm flex items-center justify-center gap-3">
+            {/* Left heroicon (heart outline) */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              className="w-5 h-5 text-[#F44336]"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21l-7.682-8.318a4.5 4.5 0 010-6.364z"
+              />
+            </svg>
+
+            <span>Trusted by food lovers</span>
+
+            {/* Right heroicon (heart outline) */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              className="w-5 h-5 text-[#F44336]"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21l-7.682-8.318a4.5 4.5 0 010-6.364z"
+              />
+            </svg>
           </div>
         </div>
       </div>
