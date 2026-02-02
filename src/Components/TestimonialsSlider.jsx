@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import Container from './Container';
 
 // Testimonials data with rating
@@ -64,13 +64,7 @@ const TestimonialsSlider = () => {
           </div>
 
           <Swiper
-            modules={[Pagination, Autoplay]}
-            pagination={{
-              clickable: true,
-              bulletClass: 'swiper-pagination-bullet opacity-50',
-              bulletActiveClass:
-                'swiper-pagination-bullet-active opacity-100 bg-[#F44336]',
-            }}
+            modules={[Autoplay]}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
             slidesPerView={1}
             spaceBetween={30}
